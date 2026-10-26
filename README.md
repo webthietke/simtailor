@@ -458,6 +458,28 @@
                     <span data-i18n="open_guide">Open Measurement Tool</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
+            </a>
+
+            <!-- Card 4: CUSTOMER LOOKBOOK -->
+            <a href="#lookbook" class="group bg-white rounded-2xl p-4 sm:p-6 shadow-xl border border-gold-200/70 hover:border-gold-500 transition-all flex flex-col justify-between h-full">
+                <div>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center text-lg sm:text-xl mb-3 sm:mb-4 group-hover:bg-gold-600 group-hover:text-white transition">
+                        <i class="fa-solid fa-camera-retro"></i>
+                    </div>
+                    <p class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-600 font-semibold">Fanpage Gallery</p>
+                    <h3 class="font-serif-luxury text-base sm:text-xl font-bold text-charcoal-900 mt-1" data-i18n="pillar4_title">CUSTOMER LOOKBOOK</h3>
+                    <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 sm:mt-2 leading-relaxed" data-i18n="pillar4_desc">
+                        Real photos & stories from our Facebook page: happy clients from France, Iceland, Denmark & Vietnam.
+                    </p>
+                </div>
+                <div class="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] sm:text-xs font-semibold text-gold-700 group-hover:translate-x-1 transition-transform">
+                    <span data-i18n="view_photos">View Fanpage Photos</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </div>
+            </a>
+        </div>
+    </section>
+
     <!-- ================= ABOUT US SECTION (TÍCH HỢP VIDEO YOUTUBE & 3 ẢNH GOOGLE DRIVE) ================= -->
     <section id="about" class="py-20 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
@@ -1465,24 +1487,6 @@
                 fallback: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80'
             },
             {
-                id: 'p3',
-                title: 'Hoi An Mulberry Silk Dress',
-                category: 'women',
-                price: 'From $90',
-                badge: '#silkdresses',
-                desc: '100% natural Hoi An mulberry silk dress, fluid drape, custom neckline, ideal for weddings & summer evenings.',
-                image: '1793023383976_9033669083747217679_9033669083747217679_2df43c88c6274ee173ead680ae8e18e9.jpg'
-            },
-            {
-                id: 'p4',
-                title: 'Double Breasted Men Suit',
-                category: 'men',
-                price: 'From $140',
-                badge: 'Sartorial',
-                desc: 'Sharp peak lapels and structured shoulders inspired by Italian bespoke tailoring, finished in 24–48 hours.',
-                image: '1793023383936_9033669083747217679_9033669083747217679_bb48de857bd4e29887d20a606898b847.jpg'
-            },
-            {
                 id: 'p5',
                 title: 'Bespoke Top & Skirt Set',
                 category: 'women',
@@ -1582,20 +1586,6 @@
                 tag: '5d • Master Tailor Sim',
                 image: '1793023383976_9033669083747217679_9033669083747217679_2df43c88c6274ee173ead680ae8e18e9.jpg',
                 fallback: 'https://i.ytimg.com/vi/DjvaeP7muno/3.jpg'
-            },
-            {
-                id: 'fp2',
-                title: 'Bespoke Silk Evening Gowns & Cheongsam',
-                caption: '✨ Lovely ladies in custom silk dresses & brocade gown crafted at 𝙎𝙞𝙢 𝘽𝙚𝙨𝙥𝙤𝙠𝙚 𝙏𝙖𝙞𝙡𝙤𝙧 🪡🧵🌸 📍 23 Le Loi Hoi An 📞+84906440883',
-                tag: '2d • Public • Silk Couture',
-                image: '1793023383965_9033669083747217679_9033669083747217679_c3bc48103577f8384b5af84dfd7997b4.jpg'
-            },
-            {
-                id: 'fp3',
-                title: '15 Years of Bespoke Experience ✨',
-                caption: '𝙃𝙚𝙡𝙡𝙤 𝙚𝙫𝙚𝙧𝙮𝙤𝙣𝙚, 𝙄 𝙖𝙢 𝙎𝙞𝙢 𝙩𝙖𝙞𝙡𝙤𝙧, 𝙬𝙞𝙩𝙝 15 𝙮𝙚𝙖𝙧𝙨 𝙤𝙛 𝙚𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙚. 🪡🧵🌸 📍 23 Le Loi Hoi An Viet Nam 🇻🇳 #simtailor #hoiansuit',
-                tag: '5d • Master Tailor Sim',
-                image: '1793023383976_9033669083747217679_9033669083747217679_2df43c88c6274ee173ead680ae8e18e9.jpg'
             },
             {
                 id: 'fp4',
@@ -1917,7 +1907,7 @@ Booking / Inquiry from simtailorhoian.com:
             res.innerHTML = matches.map(m => `
                 <div class="py-2.5 flex items-center justify-between gap-3">
                     <div class="flex items-center gap-3">
-                        <img src="${m.image}" class="w-11 h-11 rounded-lg object-cover">
+                        <img src="${m.image}" onerror="this.onerror=null; this.src='${m.fallback || 'https://placehold.co/100x100/1f1e1c/c28a3b?text=Sim'}'" class="w-11 h-11 rounded-lg object-cover">
                         <div>
                             <p class="text-xs font-bold text-charcoal-900">${m.title}</p>
                             <p class="text-[11px] text-gold-700 font-semibold">${m.price}</p>
