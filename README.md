@@ -1,4 +1,4 @@
-<html lang="en" class="scroll-smooth">
+<html lang="vi" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -52,7 +52,6 @@
             font-family: 'Inter', sans-serif;
             background-color: #faf7f2;
             color: #1f1e1c;
-            overflow-x: hidden;
         }
         .font-serif-luxury {
             font-family: 'Playfair Display', Georgia, serif;
@@ -98,7 +97,7 @@
         .pulse-gold {
             animation: pulse-ring 2s infinite;
         }
-        /* Chia 2 cột trên điện thoại và căn đều 4 cột chuẩn bên trong khung máy tính */
+        /* Ép cứng chia 2 cột trên giao diện điện thoại và 4 cột đều nhau bên trong trang trên máy tính */
         .mobile-two-cols {
             display: grid !important;
             grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -111,133 +110,111 @@
                 gap: 1.25rem !important;
             }
         }
+        @media (min-width: 768px) {
+            .mobile-two-cols {
+                grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+                gap: 1.25rem !important;
+            }
+        }
         @media (min-width: 1024px) {
             .mobile-two-cols {
                 grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
                 gap: 1.5rem !important;
             }
         }
-        /* Đảm bảo thanh danh mục trên máy tính nhỏ gọn, phân bổ đều, không bao giờ tràn dưới nút giỏ hàng */
-        .desktop-nav-even {
-            display: none;
+        /* Video iframe responsive 16:9 */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 1rem;
         }
-        @media (min-width: 1024px) {
-            .desktop-nav-even {
-                display: flex !important;
-                flex: 1 1 auto !important;
-                align-items: center !important;
-                justify-content: space-between !important;
-                gap: 0.15rem !important;
-                margin-left: 0.75rem !important;
-                margin-right: 0.75rem !important;
-                font-size: clamp(10px, 0.78vw, 12.5px) !important;
-            }
-        }
-        @media (min-width: 1280px) {
-            .desktop-nav-even {
-                margin-left: 1.5rem !important;
-                margin-right: 1.5rem !important;
-            }
-        }
-        /* Ép 3 ảnh nằm gọn trên 1 hàng ngang trên cả điện thoại và máy tính */
-        .three-photos-row {
-            display: grid !important;
-            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-            gap: 0.5rem !important;
-            width: 100% !important;
-        }
-        @media (min-width: 640px) {
-            .three-photos-row {
-                gap: 1rem !important;
-            }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
 <body class="antialiased selection:bg-gold-500 selection:text-white">
 
     <!-- ================= TOP ANNOUNCEMENT & CONTACT BAR ================= -->
-    <div class="bg-charcoal-950 text-gold-100 text-[11px] sm:text-xs border-b border-gold-900/40">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 py-2 flex items-center justify-between gap-2">
+    <div class="bg-charcoal-950 text-gold-100 text-xs border-b border-gold-900/40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2.5 flex flex-wrap items-center justify-between gap-2">
             <!-- Left Contact Info -->
-            <div class="flex flex-wrap items-center gap-x-3 sm:gap-x-6 gap-y-1">
-                <a href="https://simtailorhoian.com" class="inline-flex items-center gap-1.5 text-gold-400 font-semibold tracking-wide hover:text-gold-300 transition">
-                    <i class="fa-solid fa-globe text-[11px]"></i>
+            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+                <a href="https://simtailorhoian.com" class="flex items-center gap-1.5 text-gold-400 font-semibold tracking-wide hover:text-gold-300 transition">
+                    <i class="fa-solid fa-globe"></i>
                     <span>simtailorhoian.com</span>
                 </a>
-                <a href="#contact" class="inline-flex items-center gap-1.5 hover:text-gold-300 transition">
-                    <i class="fa-solid fa-location-dot text-gold-500 text-[11px]"></i>
-                    <span>23 Lê Lợi, Hội An</span>
+                <a href="#contact" class="flex items-center gap-1.5 hover:text-gold-300 transition">
+                    <i class="fa-solid fa-location-dot text-gold-500"></i>
+                    <span>23 Lê Lợi, Hội An, Đà Nẵng</span>
                 </a>
-                <a href="tel:0906440883" class="inline-flex items-center gap-1.5 hover:text-gold-300 transition font-medium">
-                    <i class="fa-solid fa-phone-volume text-gold-500 text-[11px]"></i>
-                    <span>0906.440.883</span>
+                <a href="tel:0906440883" class="flex items-center gap-1.5 hover:text-gold-300 transition font-medium">
+                    <i class="fa-solid fa-phone-volume text-gold-500"></i>
+                    <span>0906.440.883 (+84 906 440 883)</span>
                 </a>
-                <a href="mailto:v.thuysim@gmail.com" class="hidden md:inline-flex items-center gap-1.5 hover:text-gold-300 transition">
+                <a href="mailto:v.thuysim@gmail.com" class="hidden md:flex items-center gap-1.5 hover:text-gold-300 transition">
                     <i class="fa-solid fa-envelope text-gold-500"></i>
                     <span>v.thuysim@gmail.com</span>
                 </a>
             </div>
 
             <!-- Right Utilities: Fanpage Link & Language Toggle -->
-            <div class="flex items-center gap-2.5 shrink-0">
+            <div class="flex items-center gap-3 ml-auto">
                 <a href="https://www.facebook.com/DungDesignTailor/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-600/20 text-blue-300 border border-blue-500/30 hover:bg-blue-600/30 transition">
                     <i class="fa-brands fa-facebook"></i>
                     <span>FB: Sim Tailor (Dũng Design)</span>
                 </a>
                 <!-- Language Switcher -->
-                <div class="inline-flex items-center rounded-full bg-charcoal-800 p-0.5 border border-gold-500/40">
-                    <button id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-semibold transition bg-gold-600 text-white">EN</button>
-                    <button id="lang-vi" onclick="setLanguage('vi')" class="px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-semibold transition text-gold-200 hover:text-white">VI</button>
+                <div class="inline-flex rounded-full bg-charcoal-800 p-0.5 border border-gold-800/50">
+                    <button id="lang-en" onclick="setLanguage('en')" class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold transition bg-gold-600 text-white">EN</button>
+                    <button id="lang-vi" onclick="setLanguage('vi')" class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold transition text-gold-200 hover:text-white">VI</button>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- ================= MAIN HEADER & NAVIGATION (CĂN ĐỀU TRONG KHUNG MÁY TÍNH) ================= -->
+    <!-- ================= MAIN HEADER & NAVIGATION (CĂN ĐỀU TRÊN MÁY TÍNH) ================= -->
     <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gold-200/60 transition-all">
-        <div class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6">
-            <div class="flex items-center justify-between h-14 sm:h-16 gap-2">
-
-                <!-- Brand Logo (Thu nhỏ gọn gàng trên máy tính) -->
-                <a href="#" class="inline-flex items-center gap-1.5 sm:gap-2 group shrink-0">
-                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-charcoal-900 border border-gold-500 flex items-center justify-center shadow-sm group-hover:border-gold-400 transition shrink-0">
-                        <svg viewBox="0 0 64 64" class="w-4 h-4 sm:w-5 sm:h-5 block">
-                            <circle cx="32" cy="32" r="28" fill="none" stroke="#c28a3b" stroke-width="1" stroke-dasharray="3 2.5" opacity="0.75"/>
-                            <circle cx="32" cy="32" r="24" fill="none" stroke="#cea059" stroke-width="0.6" opacity="0.4"/>
-                            <g transform="translate(32, 32)" fill="none" stroke="#e5c17c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="-7" cy="-6" r="4.8"/>
-                                <circle cx="-7" cy="6" r="4.8"/>
-                                <line x1="-2.5" y1="-3" x2="11" y2="6.5"/>
-                                <line x1="-2.5" y1="3" x2="11" y2="-6.5"/>
-                                <circle cx="1.5" cy="0" r="1.2" fill="#e5c17c" stroke="none"/>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap items-center justify-between py-3 lg:py-0 lg:h-24 gap-2">
+                
+                <!-- Brand Logo (Căn tâm chữ EST. 2011 bằng SVG) -->
+                <a href="#" class="flex items-center gap-2.5 group shrink-0">
+                    <div class="w-11 h-11 sm:w-13 sm:h-13 rounded-full bg-charcoal-900 border-2 border-gold-500 flex items-center justify-center shadow-md group-hover:border-gold-400 transition shrink-0">
+                        <svg viewBox="0 0 64 64" class="w-full h-full block">
+                            <g transform="translate(32, 24)" fill="none" stroke="#e5c17c" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="-6.5" cy="-5" r="4.2"/>
+                                <circle cx="-6.5" cy="5" r="4.2"/>
+                                <line x1="-2.5" y1="-2.5" x2="9.5" y2="5.5"/>
+                                <line x1="-2.5" y1="2.5" x2="9.5" y2="-5.5"/>
                             </g>
+                            <text x="32" y="47" text-anchor="middle" fill="#e5c17c" font-family="Inter, Arial, sans-serif" font-size="8.5" font-weight="800" letter-spacing="0.4">EST. 2011</text>
                         </svg>
                     </div>
-                    <div class="flex flex-col justify-center">
-                        <span class="font-serif-luxury text-xs sm:text-sm xl:text-[15px] font-bold tracking-wider text-charcoal-900 whitespace-nowrap leading-none">SIM TAILOR</span>
-                        <div class="flex items-center gap-1 mt-0.5">
-                            <span class="w-1.5 h-[1px] bg-gold-500"></span>
-                            <span class="text-[6.5px] sm:text-[7px] uppercase tracking-[0.1em] text-gold-700 font-bold whitespace-nowrap leading-none">HỘI AN • EST. 2011</span>
-                        </div>
+                    <div class="flex flex-col">
+                        <span class="font-serif-luxury text-lg sm:text-xl xl:text-2xl font-bold tracking-wider text-charcoal-900 leading-none whitespace-nowrap">SIM TAILOR</span>
+                        <span class="text-[9px] text-gold-700 tracking-widest uppercase font-semibold mt-1 whitespace-nowrap">Bespoke Tailor Hoi An</span>
                     </div>
                 </a>
 
-                <!-- Desktop Navigation Menu (Nhỏ gọn, tự động căn đều, không bao giờ nằm dưới nút giỏ hàng) -->
-                <nav class="desktop-nav-even font-medium text-charcoal-800 whitespace-nowrap">
-                    <a href="#home" class="px-1 py-1 rounded text-gold-600 font-semibold hover:text-gold-700 hover:bg-gold-50/70 transition shrink-0" data-i18n="nav_home">Home</a>
-                    <a href="#about" class="px-1 py-1 rounded hover:text-gold-600 hover:bg-gold-50/70 transition shrink-0" data-i18n="nav_about">About Us</a>
-                    <a href="#media-showcase" class="px-1 py-1 rounded hover:text-gold-600 hover:bg-gold-50/70 transition flex items-center gap-1 shrink-0">
-                        <i class="fa-solid fa-circle-play text-gold-600 text-[9px]"></i>
-                        <span data-i18n="nav_video">Video & Gallery</span>
-                    </a>
-                    <a href="#process" class="px-1 py-1 rounded hover:text-gold-600 hover:bg-gold-50/70 transition shrink-0" data-i18n="nav_process">Our Process</a>
-                    <a href="#measure" class="px-1 py-1 rounded hover:text-gold-600 hover:bg-gold-50/70 transition shrink-0" data-i18n="nav_measure">How To Measure</a>
-
+                <!-- Desktop Navigation Menu (Căn đều bên trong khung trang, không bị tràn lề) -->
+                <nav class="hidden md:flex flex-1 items-center justify-evenly flex-wrap gap-x-2 lg:gap-x-3 xl:gap-x-5 gap-y-1 text-xs xl:text-[13px] font-semibold text-charcoal-800 px-2 max-w-full">
+                    <a href="#home" class="text-gold-600 font-bold hover:text-gold-700 transition whitespace-nowrap py-1" data-i18n="nav_home">Home</a>
+                    <a href="#about" class="hover:text-gold-600 transition whitespace-nowrap py-1" data-i18n="nav_about">About Us</a>
+                    <a href="#process" class="hover:text-gold-600 transition whitespace-nowrap py-1" data-i18n="nav_process">Our Process</a>
+                    <a href="#measure" class="hover:text-gold-600 transition whitespace-nowrap py-1" data-i18n="nav_measure">How To Measure</a>
+                    
                     <!-- Cloth Shop Dropdown -->
-                    <div class="relative group py-3 shrink-0">
-                        <a href="#cloth-shop" class="px-1 py-1 rounded flex items-center gap-1 hover:text-gold-600 hover:bg-gold-50/70 transition">
+                    <div class="relative group py-2">
+                        <a href="#cloth-shop" class="flex items-center gap-1 hover:text-gold-600 transition whitespace-nowrap">
                             <span data-i18n="nav_shop">Cloth Shop</span>
-                            <i class="fa-solid fa-chevron-down text-[7px] text-stone-400 group-hover:rotate-180 transition-transform"></i>
+                            <i class="fa-solid fa-chevron-down text-[10px] text-stone-400 group-hover:rotate-180 transition-transform"></i>
                         </a>
                         <div class="absolute left-1/2 -translate-x-1/2 top-full w-60 bg-white rounded-xl shadow-xl border border-gold-200/80 py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 z-50">
                             <button onclick="filterShop('all'); scrollToSection('cloth-shop')" class="w-full text-left px-4 py-2.5 text-sm hover:bg-gold-50 hover:text-gold-700 flex items-center justify-between">
@@ -259,44 +236,43 @@
                         </div>
                     </div>
 
-                    <a href="#lookbook" class="px-1 py-1 rounded hover:text-gold-600 hover:bg-gold-50/70 transition shrink-0" data-i18n="nav_lookbook">Lookbook</a>
-                    <a href="#blogs" class="px-1 py-1 rounded hover:text-gold-600 hover:bg-gold-50/70 transition shrink-0" data-i18n="nav_blogs">Blogs</a>
-                    <a href="#reviews" class="px-1 py-1 rounded hover:text-gold-600 hover:bg-gold-50/70 transition shrink-0" data-i18n="nav_reviews">Reviews</a>
-                    <a href="#contact" class="px-1 py-1 rounded hover:text-gold-600 hover:bg-gold-50/70 transition shrink-0" data-i18n="nav_contact">Contact</a>
+                    <a href="#lookbook" class="hover:text-gold-600 transition whitespace-nowrap py-1" data-i18n="nav_lookbook">Fanpage Lookbook</a>
+                    <a href="#blogs" class="hover:text-gold-600 transition whitespace-nowrap py-1" data-i18n="nav_blogs">Blogs</a>
+                    <a href="#reviews" class="hover:text-gold-600 transition whitespace-nowrap py-1" data-i18n="nav_reviews">Reviews</a>
+                    <a href="#contact" class="hover:text-gold-600 transition whitespace-nowrap py-1" data-i18n="nav_contact">Contact</a>
                 </nav>
 
-                <!-- Action Buttons: Search, Bespoke Bag & Book Appointment (Nhỏ gọn, tách biệt bên phải) -->
-                <div class="flex items-center gap-1.5 shrink-0">
+                <!-- Action Buttons: Search, Bespoke Bag & Book Appointment -->
+                <div class="flex items-center justify-end gap-1.5 sm:gap-2 shrink-0">
                     <!-- Search Toggle -->
-                    <button onclick="toggleSearchModal()" class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-stone-100 hover:bg-gold-100 text-charcoal-800 hover:text-gold-700 flex items-center justify-center transition border border-stone-200/80" title="Search">
-                        <i class="fa-solid fa-magnifying-glass text-[10px] sm:text-[11px]"></i>
+                    <button onclick="toggleSearchModal()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-stone-100 hover:bg-gold-100 text-charcoal-800 hover:text-gold-700 flex items-center justify-center transition shrink-0" title="Search">
+                        <i class="fa-solid fa-magnifying-glass text-xs sm:text-sm"></i>
                     </button>
 
                     <!-- Custom Order Bag -->
-                    <button onclick="toggleOrderDrawer()" class="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-stone-100 hover:bg-gold-100 text-charcoal-800 hover:text-gold-700 flex items-center justify-center transition border border-stone-200/80" title="Your Bespoke Order List">
-                        <i class="fa-solid fa-bag-shopping text-[10px] sm:text-[11px]"></i>
-                        <span id="cart-badge" class="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full bg-gold-600 text-white text-[8px] font-bold flex items-center justify-center shadow">0</span>
+                    <button onclick="toggleOrderDrawer()" class="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-stone-100 hover:bg-gold-100 text-charcoal-800 hover:text-gold-700 flex items-center justify-center transition shrink-0" title="Your Bespoke Order List">
+                        <i class="fa-solid fa-bag-shopping text-xs sm:text-sm"></i>
+                        <span id="cart-badge" class="absolute -top-1 -right-1 w-4 h-4 sm:w-5 sm:h-5 rounded-full bg-gold-600 text-white text-[10px] font-bold flex items-center justify-center">0</span>
                     </button>
 
                     <!-- Book Fitting CTA -->
-                    <a href="#contact" class="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 rounded-full bg-charcoal-900 hover:bg-gold-600 text-white text-[10px] xl:text-[11px] font-semibold tracking-wide transition shadow-md whitespace-nowrap">
+                    <a href="#contact" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-charcoal-900 hover:bg-gold-600 text-white text-xs font-semibold tracking-wide transition shadow-md whitespace-nowrap">
                         <i class="fa-regular fa-calendar-check"></i>
                         <span data-i18n="btn_book_fitting">Book Fitting</span>
                     </a>
 
                     <!-- Mobile Hamburger -->
-                    <button onclick="toggleMobileMenu()" class="lg:hidden w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-charcoal-900 text-gold-400 flex items-center justify-center shadow-sm">
-                        <i id="mobile-menu-icon" class="fa-solid fa-bars text-xs"></i>
+                    <button onclick="toggleMobileMenu()" class="md:hidden w-9 h-9 rounded-full bg-charcoal-900 text-gold-400 flex items-center justify-center shrink-0">
+                        <i id="mobile-menu-icon" class="fa-solid fa-bars"></i>
                     </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gold-200 px-4 pt-3 pb-6 space-y-2 shadow-xl">
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gold-200 px-4 pt-3 pb-6 space-y-2 shadow-xl">
             <a href="#home" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-gold-50 text-gold-700" data-i18n="nav_home">Home</a>
             <a href="#about" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-gold-50" data-i18n="nav_about">About Us</a>
-            <a href="#media-showcase" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-gold-50 text-gold-700" data-i18n="nav_video">Video & Gallery</a>
             <a href="#process" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-gold-50" data-i18n="nav_process">Our Process</a>
             <a href="#measure" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-gold-50" data-i18n="nav_measure">How To Measure</a>
             <a href="#cloth-shop" onclick="toggleMobileMenu()" class="block px-3 py-2 rounded-lg font-medium hover:bg-gold-50" data-i18n="nav_shop">Cloth Shop (Men & Women)</a>
@@ -312,16 +288,17 @@
         </div>
     </header>
 
-    <!-- ================= HERO BANNER SLIDER (SIMON THE TAILOR STYLE) ================= -->
+    <!-- ================= HERO BANNER SLIDER ================= -->
     <section id="home" class="relative bg-charcoal-950 overflow-hidden">
         <div class="relative h-[540px] sm:h-[620px] lg:h-[680px] w-full">
-
-            <!-- Slide 1: Bespoke Suits & Master Tailor Sim -->
+            
+            <!-- Slide 1: Ảnh đầu tiên từ Google Drive (1GxtnLxagsL82-9aOn260VjMYYsouZH9J) -->
             <div id="slide-0" class="hero-slide absolute inset-0 opacity-100 z-10">
-                <img id="hero-img-0" src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=85" 
-                     onerror="this.src='https://placehold.co/1920x1080/1f1e1c/c28a3b?text=Sim+Tailor+Hoi+An'"
-                     alt="Sim Tailor Bespoke Suit Hoi An" class="w-full h-full object-cover object-center brightness-50">
-                <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/90 via-charcoal-950/60 to-transparent"></div>
+                <img id="hero-img-0" src="https://lh3.googleusercontent.com/d/1GxtnLxagsL82-9aOn260VjMYYsouZH9J" 
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=function(){this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=1GxtnLxagsL82-9aOn260VjMYYsouZH9J';}; this.src='https://drive.google.com/thumbnail?id=1GxtnLxagsL82-9aOn260VjMYYsouZH9J&sz=w1600';"
+                     alt="Sim Tailor Bespoke Suit Hoi An" class="w-full h-full object-cover object-center brightness-[0.55]">
+                <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/90 via-charcoal-950/55 to-transparent"></div>
                 <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
                     <div class="max-w-2xl text-white space-y-5">
                         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/20 border border-gold-400/50 text-gold-300 text-xs uppercase tracking-widest font-semibold">
@@ -335,25 +312,26 @@
                         <p class="text-stone-200 text-base sm:text-lg leading-relaxed max-w-xl" data-i18n="hero1_desc">
                             "Hello everyone, I am Sim Tailor, with 15 years of experience." Custom suits, silk dresses & family outfits made to your exact measurements in 24–48 hours at 23 Lê Lợi, Hội An, Đà Nẵng & Worldwide Shipping.
                         </p>
-                        <div class="flex flex-wrap items-center gap-3 sm:gap-4 pt-2">
-                            <a href="#cloth-shop" class="px-6 sm:px-7 py-3.5 rounded-full bg-gold-600 hover:bg-gold-500 text-white font-semibold text-sm tracking-wider uppercase transition shadow-lg shadow-gold-900/50">
+                        <div class="flex flex-wrap items-center gap-4 pt-2">
+                            <a href="#cloth-shop" class="px-7 py-3.5 rounded-full bg-gold-600 hover:bg-gold-500 text-white font-semibold text-sm tracking-wider uppercase transition shadow-lg shadow-gold-900/50">
                                 <span data-i18n="btn_explore_shop">Explore Cloth Shop</span>
                             </a>
-                            <a href="#media-showcase" class="px-5 sm:px-6 py-3.5 rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-md border border-gold-400/60 text-white font-semibold text-sm tracking-wider uppercase transition flex items-center gap-2">
-                                <i class="fa-brands fa-youtube text-red-500 text-lg"></i>
-                                <span>Watch Video & 3 Photos</span>
+                            <a href="https://wa.me/84906440883" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-semibold text-sm tracking-wider uppercase transition flex items-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-green-400 text-lg"></i>
+                                <span>WhatsApp: 0906.440.883</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Slide 2: Women's Luxurious Silk Dresses & Evening Wear -->
+            <!-- Slide 2: Ảnh thứ 2 từ Google Drive (1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI) -->
             <div id="slide-1" class="hero-slide absolute inset-0 opacity-0 z-0">
-                <img id="hero-img-1" src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=1920&q=85" 
-                     onerror="this.src='https://placehold.co/1920x1080/1f1e1c/c28a3b?text=Sim+Tailor+Silk+Dresses'"
-                     alt="Sim Tailor Silk Dresses" class="w-full h-full object-cover object-center brightness-50">
-                <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/90 via-charcoal-950/60 to-transparent"></div>
+                <img id="hero-img-1" src="https://lh3.googleusercontent.com/d/1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI" 
+                     referrerpolicy="no-referrer"
+                     onerror="this.onerror=function(){this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI';}; this.src='https://drive.google.com/thumbnail?id=1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI&sz=w1600';"
+                     alt="Sim Tailor Silk Dresses" class="w-full h-full object-cover object-center brightness-[0.55]">
+                <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/90 via-charcoal-950/55 to-transparent"></div>
                 <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
                     <div class="max-w-2xl text-white space-y-5">
                         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/20 border border-gold-400/50 text-gold-300 text-xs uppercase tracking-widest font-semibold">
@@ -379,12 +357,12 @@
                 </div>
             </div>
 
-            <!-- Slide 3: Family, Couple & Worldwide Shipping -->
+            <!-- Slide 3: Master Tailor Sim tại 23 Lê Lợi -->
             <div id="slide-2" class="hero-slide absolute inset-0 opacity-0 z-0">
-                <img id="hero-img-2" src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1920&q=85" 
-                     onerror="this.src='https://placehold.co/1920x1080/1f1e1c/c28a3b?text=Bespoke+Tailoring+23+Le+Loi'"
-                     alt="Master Tailoring at 23 Le Loi Hoi An" class="w-full h-full object-cover object-center brightness-50">
-                <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/90 via-charcoal-950/60 to-transparent"></div>
+                <img id="hero-img-2" src="https://i.ytimg.com/vi/XQ1tiNhU2KQ/hqdefault.jpg" 
+                     onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=1920&q=85';"
+                     alt="Master Tailoring at 23 Le Loi Hoi An" class="w-full h-full object-cover object-center brightness-[0.55]">
+                <div class="absolute inset-0 bg-gradient-to-r from-charcoal-950/90 via-charcoal-950/55 to-transparent"></div>
                 <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
                     <div class="max-w-2xl text-white space-y-5">
                         <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-gold-500/20 border border-gold-400/50 text-gold-300 text-xs uppercase tracking-widest font-semibold">
@@ -410,110 +388,114 @@
                 </div>
             </div>
 
-            <!-- Slider Controls -->
-            <div class="absolute bottom-14 sm:bottom-16 left-4 sm:left-8 z-30 flex items-center gap-2.5">
-                <button onclick="prevSlide()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/50 hover:bg-gold-600 text-white border border-white/25 flex items-center justify-center transition backdrop-blur-sm">
+            <!-- Slider Controls (Đặt bên trái để không trùng với cụm nút liên hệ góc phải) -->
+            <div class="absolute bottom-14 sm:bottom-16 left-4 sm:left-8 z-30 flex items-center gap-3">
+                <button onclick="prevSlide()" class="w-10 h-10 rounded-full bg-black/50 hover:bg-gold-600 text-white border border-white/20 flex items-center justify-center transition">
                     <i class="fa-solid fa-chevron-left text-xs"></i>
                 </button>
-                <div class="flex items-center gap-2 px-3 py-2 rounded-full bg-black/45 backdrop-blur-sm border border-white/15">
+                <div class="flex items-center gap-2 px-3 py-2 rounded-full bg-black/40 backdrop-blur-sm">
                     <button onclick="goToSlide(0)" id="dot-0" class="w-6 h-2 rounded-full bg-gold-500 transition-all"></button>
                     <button onclick="goToSlide(1)" id="dot-1" class="w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all"></button>
                     <button onclick="goToSlide(2)" id="dot-2" class="w-2 h-2 rounded-full bg-white/50 hover:bg-white transition-all"></button>
                 </div>
-                <button onclick="nextSlide()" class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/50 hover:bg-gold-600 text-white border border-white/25 flex items-center justify-center transition backdrop-blur-sm">
+                <button onclick="nextSlide()" class="w-10 h-10 rounded-full bg-black/50 hover:bg-gold-600 text-white border border-white/20 flex items-center justify-center transition">
                     <i class="fa-solid fa-chevron-right text-xs"></i>
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- ================= 4 SIGNATURE PILLAR CARDS (CĂN ĐỀU TRONG KHUNG MÁY TÍNH) ================= -->
-    <section class="relative z-20 -mt-10 sm:-mt-12 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-        <div class="mobile-two-cols grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5">
+    <!-- ================= 4 SIGNATURE PILLAR CARDS (CHIA 2 CỘT TRÊN ĐT & 4 CỘT ĐỀU TRÊN MÁY TÍNH) ================= -->
+    <section class="relative z-20 -mt-10 sm:-mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mobile-two-cols">
             <!-- Card 1: ABOUT US -->
-            <a href="#about" class="group bg-white rounded-2xl p-3.5 sm:p-6 shadow-xl border border-gold-200/70 hover:border-gold-500 transition-all flex flex-col justify-between h-full">
+            <a href="#about" class="group bg-white rounded-2xl p-4 sm:p-6 shadow-xl border border-gold-200/70 hover:border-gold-500 transition-all flex flex-col justify-between h-full">
                 <div>
-                    <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center text-base sm:text-xl mb-2.5 sm:mb-4 group-hover:bg-gold-600 group-hover:text-white transition">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center text-lg sm:text-xl mb-3 sm:mb-4 group-hover:bg-gold-600 group-hover:text-white transition">
                         <i class="fa-solid fa-medal"></i>
                     </div>
-                    <p class="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-gold-600 font-semibold">Sim Tailor Hoi An</p>
-                    <h3 class="font-serif-luxury text-sm sm:text-xl font-bold text-charcoal-900 mt-0.5 sm:mt-1" data-i18n="pillar1_title">ABOUT US</h3>
-                    <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 sm:mt-2 leading-snug sm:leading-relaxed" data-i18n="pillar1_desc">
+                    <p class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-600 font-semibold">Sim Tailor Hoi An</p>
+                    <h3 class="font-serif-luxury text-base sm:text-xl font-bold text-charcoal-900 mt-1" data-i18n="pillar1_title">ABOUT US</h3>
+                    <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 sm:mt-2 leading-relaxed" data-i18n="pillar1_desc">
                         15+ years of family bespoke craftsmanship at 23 Lê Lợi, Hội An. Formerly Dũng Design Bespoke Tailor.
                     </p>
                 </div>
                 <div class="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] sm:text-xs font-semibold text-gold-700 group-hover:translate-x-1 transition-transform">
                     <span data-i18n="read_more">Discover Our Story</span>
-                    <i class="fa-solid fa-arrow-right text-[10px] sm:text-xs"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </a>
 
             <!-- Card 2: WHAT WE DO? -->
-            <a href="#process" class="group bg-white rounded-2xl p-3.5 sm:p-6 shadow-xl border border-gold-200/70 hover:border-gold-500 transition-all flex flex-col justify-between h-full">
+            <a href="#process" class="group bg-white rounded-2xl p-4 sm:p-6 shadow-xl border border-gold-200/70 hover:border-gold-500 transition-all flex flex-col justify-between h-full">
                 <div>
-                    <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center text-base sm:text-xl mb-2.5 sm:mb-4 group-hover:bg-gold-600 group-hover:text-white transition">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center text-lg sm:text-xl mb-3 sm:mb-4 group-hover:bg-gold-600 group-hover:text-white transition">
                         <i class="fa-solid fa-scissors"></i>
                     </div>
-                    <p class="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-gold-600 font-semibold">Our Process</p>
-                    <h3 class="font-serif-luxury text-sm sm:text-xl font-bold text-charcoal-900 mt-0.5 sm:mt-1" data-i18n="pillar2_title">WHAT WE DO?</h3>
-                    <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 sm:mt-2 leading-snug sm:leading-relaxed" data-i18n="pillar2_desc">
+                    <p class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-600 font-semibold">Our Process</p>
+                    <h3 class="font-serif-luxury text-base sm:text-xl font-bold text-charcoal-900 mt-1" data-i18n="pillar2_title">WHAT WE DO?</h3>
+                    <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 sm:mt-2 leading-relaxed" data-i18n="pillar2_desc">
                         Custom suits, silk dresses & ensembles tailored in 24–48 hours with multiple fittings & worldwide shipping.
                     </p>
                 </div>
                 <div class="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] sm:text-xs font-semibold text-gold-700 group-hover:translate-x-1 transition-transform">
                     <span data-i18n="see_process">See 4-Step Process</span>
-                    <i class="fa-solid fa-arrow-right text-[10px] sm:text-xs"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </a>
 
             <!-- Card 3: HOW TO MEASURE -->
-            <a href="#measure" class="group bg-white rounded-2xl p-3.5 sm:p-6 shadow-xl border border-gold-200/70 hover:border-gold-500 transition-all flex flex-col justify-between h-full">
+            <a href="#measure" class="group bg-white rounded-2xl p-4 sm:p-6 shadow-xl border border-gold-200/70 hover:border-gold-500 transition-all flex flex-col justify-between h-full">
                 <div>
-                    <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center text-base sm:text-xl mb-2.5 sm:mb-4 group-hover:bg-gold-600 group-hover:text-white transition">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center text-lg sm:text-xl mb-3 sm:mb-4 group-hover:bg-gold-600 group-hover:text-white transition">
                         <i class="fa-solid fa-ruler-combined"></i>
                     </div>
-                    <p class="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-gold-600 font-semibold">Remote & In-Store</p>
-                    <h3 class="font-serif-luxury text-sm sm:text-xl font-bold text-charcoal-900 mt-0.5 sm:mt-1" data-i18n="pillar3_title">HOW TO MEASURE</h3>
-                    <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 sm:mt-2 leading-snug sm:leading-relaxed" data-i18n="pillar3_desc">
+                    <p class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-600 font-semibold">Remote & In-Store</p>
+                    <h3 class="font-serif-luxury text-base sm:text-xl font-bold text-charcoal-900 mt-1" data-i18n="pillar3_title">HOW TO MEASURE</h3>
+                    <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 sm:mt-2 leading-relaxed" data-i18n="pillar3_desc">
                         Interactive body measurement guide to send your exact size online for worldwide custom tailoring.
                     </p>
                 </div>
                 <div class="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] sm:text-xs font-semibold text-gold-700 group-hover:translate-x-1 transition-transform">
                     <span data-i18n="open_guide">Open Measurement Tool</span>
-                    <i class="fa-solid fa-arrow-right text-[10px] sm:text-xs"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </a>
 
             <!-- Card 4: CUSTOMER LOOKBOOK -->
-            <a href="#lookbook" class="group bg-white rounded-2xl p-3.5 sm:p-6 shadow-xl border border-gold-200/70 hover:border-gold-500 transition-all flex flex-col justify-between h-full">
+            <a href="#lookbook" class="group bg-white rounded-2xl p-4 sm:p-6 shadow-xl border border-gold-200/70 hover:border-gold-500 transition-all flex flex-col justify-between h-full">
                 <div>
-                    <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center text-base sm:text-xl mb-2.5 sm:mb-4 group-hover:bg-gold-600 group-hover:text-white transition">
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-50 text-gold-600 flex items-center justify-center text-lg sm:text-xl mb-3 sm:mb-4 group-hover:bg-gold-600 group-hover:text-white transition">
                         <i class="fa-solid fa-camera-retro"></i>
                     </div>
-                    <p class="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest text-gold-600 font-semibold">Fanpage Gallery</p>
-                    <h3 class="font-serif-luxury text-sm sm:text-xl font-bold text-charcoal-900 mt-0.5 sm:mt-1" data-i18n="pillar4_title">CUSTOMER LOOKBOOK</h3>
-                    <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 sm:mt-2 leading-snug sm:leading-relaxed" data-i18n="pillar4_desc">
+                    <p class="text-[10px] sm:text-xs uppercase tracking-widest text-gold-600 font-semibold">Fanpage Gallery</p>
+                    <h3 class="font-serif-luxury text-base sm:text-xl font-bold text-charcoal-900 mt-1" data-i18n="pillar4_title">CUSTOMER LOOKBOOK</h3>
+                    <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 sm:mt-2 leading-relaxed" data-i18n="pillar4_desc">
                         Real photos & stories from our Facebook page: happy clients from France, Iceland, Denmark & Vietnam.
                     </p>
                 </div>
                 <div class="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-stone-100 flex items-center justify-between text-[11px] sm:text-xs font-semibold text-gold-700 group-hover:translate-x-1 transition-transform">
                     <span data-i18n="view_photos">View Fanpage Photos</span>
-                    <i class="fa-solid fa-arrow-right text-[10px] sm:text-xs"></i>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </div>
             </a>
         </div>
     </section>
 
-    <!-- ================= ABOUT US SECTION (SIM TAILOR STORY) ================= -->
+    <!-- ================= ABOUT US SECTION (TÍCH HỢP 2 ẢNH GOOGLE DRIVE & VIDEO YOUTUBE MỚI) ================= -->
     <section id="about" class="py-20 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <!-- Left Image Collage from Fanpage Identity -->
-            <div class="lg:col-span-6 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+            <!-- Left Column: 2 Ảnh Cửa Hàng từ Google Drive + Video YouTube https://www.youtube.com/watch?v=XQ1tiNhU2KQ -->
+            <div class="lg:col-span-6 space-y-5">
+                <!-- 2-Column Image Collage (Đã thay thế Ảnh 1 và Ảnh 2 theo đúng link Google Drive) -->
                 <div class="grid grid-cols-2 gap-4">
                     <div class="space-y-4">
-                        <div class="relative rounded-2xl overflow-hidden shadow-lg border-2 border-gold-200 group">
-                            <img id="fanpage-about-1" src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80" 
-                                 alt="Sim Tailor Bespoke Studio 23 Le Loi" class="w-full h-64 object-cover">
+                        <div class="relative rounded-2xl overflow-hidden shadow-lg border-2 border-gold-200 group bg-charcoal-900">
+                            <img id="fanpage-about-1" 
+                                 src="https://lh3.googleusercontent.com/d/1GxtnLxagsL82-9aOn260VjMYYsouZH9J" 
+                                 referrerpolicy="no-referrer"
+                                 onerror="this.onerror=function(){this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=1GxtnLxagsL82-9aOn260VjMYYsouZH9J';}; this.src='https://drive.google.com/thumbnail?id=1GxtnLxagsL82-9aOn260VjMYYsouZH9J&sz=w1600';"
+                                 alt="Sim Tailor Bespoke Studio 23 Le Loi" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                         </div>
                         <div class="bg-charcoal-900 text-white p-5 rounded-2xl shadow-lg border border-gold-500/40">
                             <div class="flex items-center gap-3">
@@ -527,18 +509,35 @@
                             <p class="font-serif-luxury italic text-base">"Sim Tailor is a family bespoke design tailor made to measurements & Worldwide Shipping."</p>
                             <p class="text-[11px] uppercase tracking-widest mt-2 text-gold-100">— 📍 23 Lê Lợi, Hội An</p>
                         </div>
-                        <div class="relative rounded-2xl overflow-hidden shadow-lg border-2 border-gold-200">
-                            <img id="fanpage-about-2" src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=800&q=80" 
-                                 alt="Custom Suit Fitting at Sim Tailor" class="w-full h-64 object-cover">
+                        <div class="relative rounded-2xl overflow-hidden shadow-lg border-2 border-gold-200 group bg-charcoal-900">
+                            <img id="fanpage-about-2" 
+                                 src="https://lh3.googleusercontent.com/d/1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI" 
+                                 referrerpolicy="no-referrer"
+                                 onerror="this.onerror=function(){this.onerror=null;this.src='https://drive.google.com/uc?export=view&id=1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI';}; this.src='https://drive.google.com/thumbnail?id=1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI&sz=w1600';"
+                                 alt="Custom Suit Fitting at Sim Tailor" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                         </div>
                     </div>
+                </div>
+
+                <!-- YouTube Video https://www.youtube.com/watch?v=XQ1tiNhU2KQ -->
+                <div class="video-container shadow-2xl border-2 border-gold-300 bg-charcoal-900">
+                    <iframe src="https://www.youtube.com/embed/XQ1tiNhU2KQ?rel=0&playsinline=1" 
+                            title="Sim Tailor Hoi An - 23 Lê Lợi" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                </div>
+                <div class="flex items-center justify-between px-1 text-xs text-stone-600">
+                    <span class="font-semibold text-charcoal-900"><i class="fa-brands fa-youtube text-red-600 mr-1.5"></i>Video thực tế tại Sim Tailor – 23 Lê Lợi, Hội An</span>
+                    <a href="https://www.youtube.com/watch?v=XQ1tiNhU2KQ" target="_blank" rel="noopener noreferrer" class="text-gold-700 hover:underline font-semibold">Xem trên YouTube <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
                 </div>
             </div>
 
             <!-- Right Content (SimonTheTailor Layout + DungDesignTailor Bio) -->
             <div class="lg:col-span-6 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-100 text-gold-800 text-xs font-semibold uppercase tracking-widest">
-                    <i class="fa-solid fa-scissors"></i>
+                    <i class="fa-solid fa-needle"></i>
                     <span>SIM TAILOR • FORMERLY DŨNG DESIGN TAILOR</span>
                 </div>
                 <h2 class="font-serif-luxury text-3xl sm:text-4xl lg:text-5xl font-bold text-charcoal-900 leading-tight" data-i18n="about_heading">
@@ -552,23 +551,23 @@
                 </p>
 
                 <!-- Key Highlights Grid -->
-                <div class="grid grid-cols-2 gap-2.5 sm:gap-4 pt-2">
-                    <div class="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-white border border-gold-200/70 shadow-sm">
-                        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gold-100 text-gold-700 flex items-center justify-center shrink-0 mt-0.5">
-                            <i class="fa-solid fa-clock text-xs sm:text-sm"></i>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-gold-200/70 shadow-sm">
+                        <div class="w-9 h-9 rounded-lg bg-gold-100 text-gold-700 flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-clock"></i>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-xs sm:text-sm text-charcoal-900">Express 24–48h Turnaround</h4>
-                            <p class="text-[11px] sm:text-xs text-stone-500 mt-0.5">Including 2–3 personal fittings & complimentary hotel delivery in Hoi An.</p>
+                            <h4 class="font-semibold text-sm text-charcoal-900">Express 24–48h Turnaround</h4>
+                            <p class="text-xs text-stone-500 mt-0.5">Including 2–3 personal fittings & complimentary hotel delivery in Hoi An.</p>
                         </div>
                     </div>
-                    <div class="flex items-start gap-2.5 sm:gap-3 p-3 sm:p-3.5 rounded-xl bg-white border border-gold-200/70 shadow-sm">
-                        <div class="w-8 h-8 sm:w-9 sm:h-9 rounded-lg bg-gold-100 text-gold-700 flex items-center justify-center shrink-0 mt-0.5">
-                            <i class="fa-solid fa-earth-americas text-xs sm:text-sm"></i>
+                    <div class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-gold-200/70 shadow-sm">
+                        <div class="w-9 h-9 rounded-lg bg-gold-100 text-gold-700 flex items-center justify-center shrink-0 mt-0.5">
+                            <i class="fa-solid fa-earth-americas"></i>
                         </div>
                         <div>
-                            <h4 class="font-semibold text-xs sm:text-sm text-charcoal-900">Worldwide Shipping</h4>
-                            <p class="text-[11px] sm:text-xs text-stone-500 mt-0.5">We store your measurements so you can order more suits & dresses from home.</p>
+                            <h4 class="font-semibold text-sm text-charcoal-900">Worldwide Shipping</h4>
+                            <p class="text-xs text-stone-500 mt-0.5">We store your measurements so you can order more suits & dresses from home.</p>
                         </div>
                     </div>
                 </div>
@@ -585,123 +584,9 @@
                 </div>
             </div>
         </div>
-
-        <!-- ================= VIDEO YOUTUBE & 3 ẢNH GOOGLE DRIVE SHOWCASE ================= -->
-        <div id="media-showcase" class="mt-20 pt-16 border-t border-gold-200/80">
-            <div class="max-w-3xl mb-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-100 text-gold-800 text-xs font-semibold uppercase tracking-widest mb-2">
-                    <i class="fa-solid fa-film text-gold-600"></i>
-                    <span>SIM TAILOR STUDIO MEDIA • 23 LÊ LỢI, HỘI AN</span>
-                </div>
-                <h3 class="font-serif-luxury text-2xl sm:text-4xl font-bold text-charcoal-900" data-i18n="media_heading">
-                    Official Video & 3 Featured Studio Photos
-                </h3>
-                <p class="text-stone-600 text-sm sm:text-base mt-1.5" data-i18n="media_sub">
-                    Explore our authentic bespoke tailoring studio video at <strong>Sim Tailor (23 Lê Lợi, Hội An)</strong> alongside 3 featured photos from our official collection.
-                </p>
-            </div>
-
-            <!-- Main Layout: Left/Top YouTube Video (DjvaeP7muno) + Right/Bottom 3 Real Google Drive Photos -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-                <!-- YouTube Video Player Card (https://www.youtube.com/watch?v=DjvaeP7muno) -->
-                <div class="lg:col-span-5 bg-charcoal-900 rounded-3xl p-4 sm:p-5 border border-gold-500/40 shadow-xl flex flex-col justify-between">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-3">
-                            <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gold-400">
-                                <i class="fa-brands fa-youtube text-red-500 text-base"></i>
-                                <span>Sim Tailor Official Video</span>
-                            </span>
-                            <a href="https://www.youtube.com/watch?v=DjvaeP7muno" target="_blank" rel="noopener noreferrer" class="text-[11px] text-stone-300 hover:text-gold-300 underline flex items-center gap-1">
-                                <span>Watch on YouTube</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                            </a>
-                        </div>
-                        <div class="relative w-full overflow-hidden rounded-2xl bg-black aspect-video sm:aspect-[16/10] border border-gold-500/30 shadow-inner">
-                            <iframe 
-                                class="w-full h-full"
-                                src="https://www.youtube.com/embed/DjvaeP7muno?rel=0&modestbranding=1&playsinline=1" 
-                                title="Sim Tailor Hoi An Official Video"
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                referrerpolicy="strict-origin-when-cross-origin"
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                    <div class="mt-4 pt-3 border-t border-stone-800 flex items-center justify-between gap-3 text-xs text-stone-300">
-                        <div>
-                            <p class="font-serif-luxury font-bold text-white text-sm">Sim Tailor – 23 Lê Lợi, Hội An</p>
-                            <p class="text-[11px] text-stone-400">Bespoke Suits, Silk Dresses & Custom Tailoring</p>
-                        </div>
-                        <a href="https://wa.me/84906440883" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-gold-600 hover:bg-gold-500 text-white font-semibold text-xs shrink-0 transition">
-                            <i class="fa-brands fa-whatsapp mr-1"></i>0906.440.883
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 3 Real Photos Loaded Directly from the 3 Provided Google Drive Links (1 Row on Mobile & Desktop) -->
-                <div class="lg:col-span-7 flex flex-col justify-between">
-                    <div id="drive-three-cards" class="three-photos-row h-full">
-                        <!-- Photo 1: 1LfhNHNeeI7qhBAoyD6siRucBAz_7_dvU -->
-                        <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
-                            <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
-                                <img id="drive-img-0" 
-                                     src="https://drive.google.com/thumbnail?id=1LfhNHNeeI7qhBAoyD6siRucBAz_7_dvU&sz=w1200" 
-                                     onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1LfhNHNeeI7qhBAoyD6siRucBAz_7_dvU=w1200';"
-                                     alt="Sim Tailor Studio Photo 1" 
-                                     class="zoom-img w-full h-full object-cover">
-                                <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
-                                    Photo 01
-                                </span>
-                            </div>
-                            <div class="p-2 sm:p-3.5 bg-white">
-                                <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Gallery #1</p>
-                                <p class="text-[9px] sm:text-[11px] text-stone-500 truncate">23 Lê Lợi, Hội An</p>
-                            </div>
-                        </div>
-
-                        <!-- Photo 2: 1RTw4FMaED7girFamAKt56bNogrPfERBK -->
-                        <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
-                            <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
-                                <img id="drive-img-1" 
-                                     src="https://drive.google.com/thumbnail?id=1RTw4FMaED7girFamAKt56bNogrPfERBK&sz=w1200" 
-                                     onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1RTw4FMaED7girFamAKt56bNogrPfERBK=w1200';"
-                                     alt="Sim Tailor Studio Photo 2" 
-                                     class="zoom-img w-full h-full object-cover">
-                                <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
-                                    Photo 02
-                                </span>
-                            </div>
-                            <div class="p-2 sm:p-3.5 bg-white">
-                                <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Gallery #2</p>
-                                <p class="text-[9px] sm:text-[11px] text-stone-500 truncate">Sim Tailor Couture</p>
-                            </div>
-                        </div>
-
-                        <!-- Photo 3: 1hqePF8Kpppqv8KshkWzRuJATsUp4FP9f -->
-                        <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
-                            <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
-                                <img id="drive-img-2" 
-                                     src="https://drive.google.com/thumbnail?id=1hqePF8Kpppqv8KshkWzRuJATsUp4FP9f&sz=w1200" 
-                                     onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1hqePF8Kpppqv8KshkWzRuJATsUp4FP9f=w1200';"
-                                     alt="Sim Tailor Studio Photo 3" 
-                                     class="zoom-img w-full h-full object-cover">
-                                <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
-                                    Photo 03
-                                </span>
-                            </div>
-                            <div class="p-2 sm:p-3.5 bg-white">
-                                <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Gallery #3</p>
-                                <p class="text-[9px] sm:text-[11px] text-stone-500 truncate">Made to Measure</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
-    <!-- ================= CLOTH SHOP SECTION (DANH MỤC NHỎ GỌN & CĂN ĐỀU TRONG TRANG WEB) ================= -->
+    <!-- ================= CLOTH SHOP SECTION (12 SẢN PHẨM ĐẦY ĐỦ - 2 CỘT ĐT & 4 CỘT MÁY TÍNH) ================= -->
     <section id="cloth-shop" class="py-20 bg-white border-y border-gold-200/60">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->
@@ -713,24 +598,24 @@
                 </p>
             </div>
 
-            <!-- Category Tabs (Nhỏ gọn & căn đều 4 cột bằng nhau bên trong khung trang web trên máy tính) -->
-            <div class="max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 mt-7">
-                <button onclick="filterShop('all')" id="tab-all" class="shop-tab w-full px-3 py-2 rounded-full text-[11px] sm:text-xs font-semibold transition bg-charcoal-900 text-white shadow-md text-center truncate" data-i18n="cat_all">
+            <!-- Category Tabs (Matching simonthetailor.com: All | Men's Clothes | Women luxurious Clothes + Family Sets) -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-8">
+                <button onclick="filterShop('all')" id="tab-all" class="shop-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition bg-charcoal-900 text-white shadow-md" data-i18n="cat_all">
                     All Collection
                 </button>
-                <button onclick="filterShop('men')" id="tab-men" class="shop-tab w-full px-3 py-2 rounded-full text-[11px] sm:text-xs font-semibold transition bg-stone-100 text-charcoal-800 hover:bg-gold-100 text-center truncate" data-i18n="cat_men">
+                <button onclick="filterShop('men')" id="tab-men" class="shop-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition bg-stone-100 text-charcoal-800 hover:bg-gold-100" data-i18n="cat_men">
                     Men's Clothes
                 </button>
-                <button onclick="filterShop('women')" id="tab-women" class="shop-tab w-full px-3 py-2 rounded-full text-[11px] sm:text-xs font-semibold transition bg-stone-100 text-charcoal-800 hover:bg-gold-100 text-center truncate" data-i18n="cat_women">
+                <button onclick="filterShop('women')" id="tab-women" class="shop-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition bg-stone-100 text-charcoal-800 hover:bg-gold-100" data-i18n="cat_women">
                     Women Luxurious Clothes
                 </button>
-                <button onclick="filterShop('family')" id="tab-family" class="shop-tab w-full px-3 py-2 rounded-full text-[11px] sm:text-xs font-semibold transition bg-stone-100 text-charcoal-800 hover:bg-gold-100 text-center truncate" data-i18n="cat_family">
-                    Couple & Family Sets
+                <button onclick="filterShop('family')" id="tab-family" class="shop-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition bg-stone-100 text-charcoal-800 hover:bg-gold-100" data-i18n="cat_family">
+                    Couple & Family Sets (Fanpage)
                 </button>
             </div>
 
-            <!-- Products Grid (Rendered dynamically via JS for filtering - 2 columns on mobile, 4 even columns on desktop) -->
-            <div id="products-grid" class="mobile-two-cols grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mt-8 sm:mt-10">
+            <!-- Products Grid -->
+            <div id="products-grid" class="mobile-two-cols mt-10">
                 <!-- Populated by JavaScript -->
             </div>
         </div>
@@ -738,8 +623,8 @@
 
     <!-- ================= FANPAGE LOOKBOOK & LIVE FEED (DUNG DESIGN TAILOR / SIM TAILOR) ================= -->
     <section id="lookbook" class="py-20 bg-ivory">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
                 <div>
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-xs font-semibold mb-3">
                         <i class="fa-brands fa-facebook"></i>
@@ -753,15 +638,15 @@
                     </p>
                 </div>
                 <div class="flex flex-wrap items-center gap-3">
-                    <a href="https://www.facebook.com/DungDesignTailor/" target="_blank" rel="noopener noreferrer" class="px-4 py-2.5 rounded-full bg-charcoal-900 hover:bg-charcoal-800 text-white text-xs sm:text-sm font-semibold transition flex items-center gap-2">
+                    <a href="https://www.facebook.com/DungDesignTailor/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-charcoal-900 hover:bg-charcoal-800 text-white text-xs sm:text-sm font-semibold transition flex items-center gap-2 shadow-md">
                         <i class="fa-brands fa-facebook-f text-blue-400"></i>
                         <span>Follow @DungDesignTailor</span>
                     </a>
                 </div>
             </div>
 
-            <!-- Fanpage Posts Grid (2 columns on mobile, 4 even columns on desktop) -->
-            <div id="fanpage-grid" class="mobile-two-cols grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+            <!-- Fanpage Posts Grid -->
+            <div id="fanpage-grid" class="mobile-two-cols">
                 <!-- Populated by JavaScript from real Fanpage Posts -->
             </div>
         </div>
@@ -769,7 +654,7 @@
 
     <!-- ================= OUR PROCESS SECTION (4 STEPS IN 24-48H) ================= -->
     <section id="process" class="py-20 bg-charcoal-900 text-white relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center max-w-3xl mx-auto space-y-3">
                 <p class="text-xs uppercase tracking-widest text-gold-400 font-semibold">HOW WE CRAFT YOUR GARMENT</p>
                 <h2 class="font-serif-luxury text-3xl sm:text-5xl font-bold" data-i18n="process_heading">Our Bespoke Process</h2>
@@ -778,51 +663,51 @@
                 </p>
             </div>
 
-            <div class="mobile-two-cols grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mt-10 sm:mt-12">
+            <div class="mobile-two-cols mt-12">
                 <!-- Step 1 -->
                 <div class="bg-charcoal-800/90 border border-gold-500/30 rounded-2xl p-4 sm:p-6 relative group hover:border-gold-400 transition">
-                    <span class="absolute top-3 right-3 sm:top-4 sm:right-5 font-serif-luxury text-2xl sm:text-4xl font-bold text-gold-500/20 group-hover:text-gold-500/40 transition">01</span>
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-base sm:text-xl mb-3 sm:mb-5">
+                    <span class="absolute top-4 right-5 font-serif-luxury text-3xl sm:text-4xl font-bold text-gold-500/20 group-hover:text-gold-500/40 transition">01</span>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-lg sm:text-xl mb-4 sm:mb-5">
                         <i class="fa-solid fa-swatchbook"></i>
                     </div>
-                    <h3 class="font-serif-luxury text-sm sm:text-xl font-bold text-white">Style & Fabric Consultation</h3>
-                    <p class="text-[11px] sm:text-xs text-stone-300 mt-1.5 sm:mt-2.5 leading-snug sm:leading-relaxed">
+                    <h3 class="font-serif-luxury text-base sm:text-xl font-bold text-white">Style & Fabric Consultation</h3>
+                    <p class="text-[11px] sm:text-xs text-stone-300 mt-2 leading-relaxed">
                         Choose from 500+ premium fabrics (Mulberry Silk, Cashmere Wool, Linen, Egyptian Cotton) and customize lapels, buttons, linings, and monograms with Master Tailor Sim.
                     </p>
                 </div>
 
                 <!-- Step 2 -->
                 <div class="bg-charcoal-800/90 border border-gold-500/30 rounded-2xl p-4 sm:p-6 relative group hover:border-gold-400 transition">
-                    <span class="absolute top-3 right-3 sm:top-4 sm:right-5 font-serif-luxury text-2xl sm:text-4xl font-bold text-gold-500/20 group-hover:text-gold-500/40 transition">02</span>
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-base sm:text-xl mb-3 sm:mb-5">
+                    <span class="absolute top-4 right-5 font-serif-luxury text-3xl sm:text-4xl font-bold text-gold-500/20 group-hover:text-gold-500/40 transition">02</span>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-lg sm:text-xl mb-4 sm:mb-5">
                         <i class="fa-solid fa-ruler-vertical"></i>
                     </div>
-                    <h3 class="font-serif-luxury text-sm sm:text-xl font-bold text-white">25-Point Body Measurement</h3>
-                    <p class="text-[11px] sm:text-xs text-stone-300 mt-1.5 sm:mt-2.5 leading-snug sm:leading-relaxed">
+                    <h3 class="font-serif-luxury text-base sm:text-xl font-bold text-white">25-Point Body Measurement</h3>
+                    <p class="text-[11px] sm:text-xs text-stone-300 mt-2 leading-relaxed">
                         We take over 25 precise anatomical measurements and posture notes so your suit or dress drapes naturally around your shoulders and waist.
                     </p>
                 </div>
 
                 <!-- Step 3 -->
                 <div class="bg-charcoal-800/90 border border-gold-500/30 rounded-2xl p-4 sm:p-6 relative group hover:border-gold-400 transition">
-                    <span class="absolute top-3 right-3 sm:top-4 sm:right-5 font-serif-luxury text-2xl sm:text-4xl font-bold text-gold-500/20 group-hover:text-gold-500/40 transition">03</span>
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-base sm:text-xl mb-3 sm:mb-5">
+                    <span class="absolute top-4 right-5 font-serif-luxury text-3xl sm:text-4xl font-bold text-gold-500/20 group-hover:text-gold-500/40 transition">03</span>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-lg sm:text-xl mb-4 sm:mb-5">
                         <i class="fa-solid fa-user-tie"></i>
                     </div>
-                    <h3 class="font-serif-luxury text-sm sm:text-xl font-bold text-white">First & Second Fittings</h3>
-                    <p class="text-[11px] sm:text-xs text-stone-300 mt-1.5 sm:mt-2.5 leading-snug sm:leading-relaxed">
+                    <h3 class="font-serif-luxury text-base sm:text-xl font-bold text-white">First & Second Fittings</h3>
+                    <p class="text-[11px] sm:text-xs text-stone-300 mt-2 leading-relaxed">
                         Within 12–24 hours, try on your garment at 23 Lê Lợi (or at your hotel). Master Tailor Sim pins and refines every millimeter for a second-skin fit.
                     </p>
                 </div>
 
                 <!-- Step 4 -->
                 <div class="bg-charcoal-800/90 border border-gold-500/30 rounded-2xl p-4 sm:p-6 relative group hover:border-gold-400 transition">
-                    <span class="absolute top-3 right-3 sm:top-4 sm:right-5 font-serif-luxury text-2xl sm:text-4xl font-bold text-gold-500/20 group-hover:text-gold-500/40 transition">04</span>
-                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-base sm:text-xl mb-3 sm:mb-5">
+                    <span class="absolute top-4 right-5 font-serif-luxury text-3xl sm:text-4xl font-bold text-gold-500/20 group-hover:text-gold-500/40 transition">04</span>
+                    <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-lg sm:text-xl mb-4 sm:mb-5">
                         <i class="fa-solid fa-plane-circle-check"></i>
                     </div>
-                    <h3 class="font-serif-luxury text-sm sm:text-xl font-bold text-white">Pickup or Worldwide Delivery</h3>
-                    <p class="text-[11px] sm:text-xs text-stone-300 mt-1.5 sm:mt-2.5 leading-snug sm:leading-relaxed">
+                    <h3 class="font-serif-luxury text-base sm:text-xl font-bold text-white">Pickup or Worldwide Delivery</h3>
+                    <p class="text-[11px] sm:text-xs text-stone-300 mt-2 leading-relaxed">
                         Collect your pressed garment in a luxury suit bag, enjoy free hotel drop-off, or let us ship directly to your home country via DHL/FedEx.
                     </p>
                 </div>
@@ -834,7 +719,7 @@
     <section id="measure" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-
+                
                 <!-- Left Visual Measurement Guide -->
                 <div class="lg:col-span-5 bg-ivory rounded-3xl p-6 sm:p-8 border border-gold-200 shadow-sm">
                     <span class="text-xs font-bold uppercase tracking-widest text-gold-600">REMOTE BESPOKE ORDERING</span>
@@ -989,7 +874,10 @@
                 <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-gold-200/70 flex flex-col justify-between group">
                     <div>
                         <div class="relative h-56 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" alt="Custom Suit Guide Hoi An" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img src="https://lh3.googleusercontent.com/d/1GxtnLxagsL82-9aOn260VjMYYsouZH9J" 
+                                 referrerpolicy="no-referrer"
+                                 onerror="this.onerror=function(){this.onerror=null;this.src='https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80';}; this.src='https://drive.google.com/thumbnail?id=1GxtnLxagsL82-9aOn260VjMYYsouZH9J&sz=w1600';"
+                                 alt="Custom Suit Guide Hoi An" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute top-4 left-4 bg-charcoal-900/90 text-gold-400 rounded-xl px-3 py-1.5 text-center leading-tight border border-gold-500/40">
                                 <span class="block text-lg font-bold font-serif-luxury">01</span>
                                 <span class="text-[10px] uppercase tracking-wider">Oct</span>
@@ -1017,7 +905,10 @@
                 <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-gold-200/70 flex flex-col justify-between group">
                     <div>
                         <div class="relative h-56 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=800&q=80" alt="23 Le Loi Hoi An Ancient Town" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img src="https://lh3.googleusercontent.com/d/1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI" 
+                                 referrerpolicy="no-referrer"
+                                 onerror="this.onerror=function(){this.onerror=null;this.src='https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=800&q=80';}; this.src='https://drive.google.com/thumbnail?id=1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI&sz=w1600';"
+                                 alt="23 Le Loi Hoi An Ancient Town" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute top-4 left-4 bg-charcoal-900/90 text-gold-400 rounded-xl px-3 py-1.5 text-center leading-tight border border-gold-500/40">
                                 <span class="block text-lg font-bold font-serif-luxury">12</span>
                                 <span class="text-[10px] uppercase tracking-wider">Aug</span>
@@ -1045,7 +936,8 @@
                 <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-gold-200/70 flex flex-col justify-between group">
                     <div>
                         <div class="relative h-56 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Protecting Your Custom Suit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" 
+                                 alt="Protecting Your Custom Suit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute top-4 left-4 bg-charcoal-900/90 text-gold-400 rounded-xl px-3 py-1.5 text-center leading-tight border border-gold-500/40">
                                 <span class="block text-lg font-bold font-serif-luxury">10</span>
                                 <span class="text-[10px] uppercase tracking-wider">Mar</span>
@@ -1087,7 +979,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- Review 1: Julie from France -->
+                <!-- Review 1: Julie from France (Real Fanpage Post Reference) -->
                 <div class="bg-ivory rounded-2xl p-6 border border-gold-200 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -1112,7 +1004,7 @@
                     </div>
                 </div>
 
-                <!-- Review 2: Family from Iceland -->
+                <!-- Review 2: Family from Iceland (Real Fanpage Post Reference) -->
                 <div class="bg-ivory rounded-2xl p-6 border border-gold-200 shadow-sm flex flex-col justify-between">
                     <div>
                         <div class="flex items-center justify-between mb-4">
@@ -1169,7 +1061,7 @@
     <section id="contact" class="py-20 bg-charcoal-950 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-
+                
                 <!-- Left Info & Hoi An Ancient Town Map Card -->
                 <div class="lg:col-span-5 space-y-6">
                     <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/20 text-gold-300 text-xs font-semibold uppercase tracking-widest">
@@ -1329,9 +1221,6 @@
                         <a href="https://www.facebook.com/DungDesignTailor/" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-charcoal-800 hover:bg-blue-600 text-white flex items-center justify-center transition">
                             <i class="fa-brands fa-facebook-f text-sm"></i>
                         </a>
-                        <a href="https://www.youtube.com/watch?v=DjvaeP7muno" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-charcoal-800 hover:bg-red-600 text-white flex items-center justify-center transition" title="Sim Tailor YouTube">
-                            <i class="fa-brands fa-youtube text-sm"></i>
-                        </a>
                         <a href="https://wa.me/84906440883" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-charcoal-800 hover:bg-green-600 text-white flex items-center justify-center transition">
                             <i class="fa-brands fa-whatsapp text-sm"></i>
                         </a>
@@ -1347,7 +1236,6 @@
                     <ul class="space-y-2 text-xs">
                         <li><a href="#home" class="hover:text-gold-400 transition">Home</a></li>
                         <li><a href="#about" class="hover:text-gold-400 transition">About Us (15 Years Experience)</a></li>
-                        <li><a href="#media-showcase" class="hover:text-gold-400 transition">Official Video & 3 Drive Photos</a></li>
                         <li><a href="#process" class="hover:text-gold-400 transition">Our Process (24–48h Turnaround)</a></li>
                         <li><a href="#measure" class="hover:text-gold-400 transition">How To Measure Online</a></li>
                         <li><a href="#lookbook" class="hover:text-gold-400 transition">Fanpage Customer Lookbook</a></li>
@@ -1403,51 +1291,34 @@
         </div>
     </footer>
 
-    <!-- ================= FLOATING QUICK CONTACT BAR ================= -->
-    <div class="fixed bottom-4 right-3.5 sm:bottom-6 sm:right-5 z-40 flex flex-col items-end gap-2.5">
+    <!-- ================= FLOATING QUICK CONTACT BAR (CĂN ĐỀU ĐẸP TRÊN MỌI MÀN HÌNH) ================= -->
+    <div class="fixed bottom-5 right-4 sm:right-5 z-40 flex flex-col items-end gap-2.5">
         <!-- Messenger / Fanpage -->
         <a href="https://www.facebook.com/DungDesignTailor/" target="_blank" rel="noopener noreferrer"
-           class="group relative w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-tr from-blue-700 to-blue-500 text-white shadow-lg shadow-blue-950/30 border-2 border-white/90 flex items-center justify-center hover:scale-110 transition-transform"
-           title="Facebook Fanpage Sim Tailor">
-            <i class="fa-brands fa-facebook-messenger text-lg sm:text-xl leading-none"></i>
-            <span class="pointer-events-none absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-charcoal-900/95 text-white text-xs font-semibold whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all shadow-md hidden sm:block">
-                FB: Sim Tailor
-            </span>
+           class="w-12 h-12 rounded-full bg-[#1877F2] hover:bg-blue-600 text-white shadow-lg border-2 border-white flex items-center justify-center transition-transform hover:scale-110" title="Facebook Fanpage Sim Tailor">
+            <i class="fa-brands fa-facebook-messenger text-[22px]"></i>
         </a>
 
         <!-- Zalo 0906.440.883 -->
         <a href="https://zalo.me/0906440883" target="_blank" rel="noopener noreferrer"
-           class="group relative w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-tr from-sky-600 to-cyan-400 text-white shadow-lg shadow-sky-950/30 border-2 border-white/90 flex items-center justify-center hover:scale-110 transition-transform"
-           title="Chat Zalo 0906.440.883">
-            <svg viewBox="0 0 40 40" class="w-7 h-7 sm:w-8 sm:h-8 block">
-                <path d="M20 5C11.2 5 4 11.1 4 18.6c0 4.2 2.3 8 5.9 10.5-.3 1.6-1.1 3.7-1.2 3.9-.2.4.2.7.6.5 1.7-.7 4.4-2.1 5.8-2.9 1.5.4 3.2.6 4.9.6 8.8 0 16-6.1 16-13.6S28.8 5 20 5z" fill="#ffffff"/>
-                <text x="20" y="22.5" text-anchor="middle" fill="#0284c7" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="800" letter-spacing="-0.3">Zalo</text>
+           class="w-12 h-12 rounded-full bg-[#0088FF] hover:bg-sky-500 text-white shadow-lg border-2 border-white flex items-center justify-center transition-transform hover:scale-110" title="Chat Zalo 0906.440.883">
+            <svg viewBox="0 0 36 36" class="w-7 h-7 block">
+                <circle cx="18" cy="18" r="16" fill="#ffffff"/>
+                <text x="18" y="21.5" text-anchor="middle" fill="#0088FF" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="900">Zalo</text>
             </svg>
-            <span class="pointer-events-none absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-charcoal-900/95 text-white text-xs font-semibold whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all shadow-md hidden sm:block">
-                Zalo: 0906.440.883
-            </span>
         </a>
 
         <!-- WhatsApp +84906440883 -->
         <a href="https://wa.me/84906440883" target="_blank" rel="noopener noreferrer"
-           class="group relative w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-tr from-emerald-600 to-green-500 text-white shadow-lg shadow-green-950/30 border-2 border-white/90 flex items-center justify-center hover:scale-110 transition-transform"
-           title="WhatsApp +84 906 440 883">
-            <i class="fa-brands fa-whatsapp text-xl sm:text-2xl leading-none"></i>
-            <span class="pointer-events-none absolute right-full mr-3 px-3 py-1.5 rounded-xl bg-charcoal-900/95 text-white text-xs font-semibold whitespace-nowrap opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all shadow-md hidden sm:block">
-                WhatsApp: +84 906 440 883
-            </span>
+           class="w-12 h-12 rounded-full bg-[#25D366] hover:bg-green-500 text-white shadow-lg border-2 border-white flex items-center justify-center transition-transform hover:scale-110" title="WhatsApp +84 906 440 883">
+            <i class="fa-brands fa-whatsapp text-[24px]"></i>
         </a>
 
         <!-- Direct Phone Call -->
         <a href="tel:0906440883"
-           class="pulse-gold flex items-center gap-2 bg-gradient-to-r from-charcoal-900 via-charcoal-800 to-charcoal-900 hover:from-gold-700 hover:to-gold-500 text-white pl-1.5 pr-3.5 py-1.5 rounded-full shadow-xl border-2 border-gold-400 transition-all">
-            <span class="w-8 h-8 rounded-full bg-gold-500 text-white flex items-center justify-center shrink-0 shadow">
-                <i class="fa-solid fa-phone-volume text-xs"></i>
-            </span>
-            <div class="flex flex-col leading-tight text-left">
-                <span class="text-[8px] uppercase tracking-widest text-gold-300 font-semibold">Hotline 24/7</span>
-                <span class="text-xs font-bold tracking-wider text-white">0906.440.883</span>
-            </div>
+           class="pulse-gold flex items-center gap-2 bg-gold-600 hover:bg-gold-500 text-white px-4 h-12 rounded-full shadow-xl border-2 border-white transition-transform hover:scale-105">
+            <i class="fa-solid fa-phone-volume text-base"></i>
+            <span class="text-xs font-bold tracking-wider">0906.440.883</span>
         </a>
     </div>
 
@@ -1573,31 +1444,8 @@
 
     <!-- ================= JAVASCRIPT LOGIC ================= -->
     <script>
-        // Danh sách 3 File ID ảnh thực tế từ Google Drive đã được cung cấp
-        const DRIVE_PHOTO_IDS = [
-            '1LfhNHNeeI7qhBAoyD6siRucBAz_7_dvU',
-            '1RTw4FMaED7girFamAKt56bNogrPfERBK',
-            '1hqePF8Kpppqv8KshkWzRuJATsUp4FP9f'
-        ];
-
-        // Gắn trực tiếp 3 ảnh thực tế từ Google Drive vào 3 thẻ ảnh mà không bị lỗi CORS
-        function loadDriveFolderImages() {
-            DRIVE_PHOTO_IDS.forEach((fileId, index) => {
-                const imgEl = document.getElementById('drive-img-' + index);
-                if (imgEl) {
-                    imgEl.src = `https://drive.google.com/thumbnail?id=${fileId}&sz=w1200`;
-                    imgEl.onerror = function() {
-                        this.onerror = function() {
-                            this.src = `https://drive.google.com/uc?export=view&id=${fileId}`;
-                        };
-                        this.src = `https://lh3.googleusercontent.com/d/${fileId}=w1200`;
-                    };
-                }
-            });
-        }
-
-        // 1. Cloth Shop Catalog (Combining simonthetailor.com items + DungDesignTailor fanpage specialties)
-        const defaultProducts = [
+        // 1. Cloth Shop Catalog (Full 12 bespoke items)
+        const products = [
             {
                 id: 'p1',
                 title: 'Three Pieces Navy Men Suit',
@@ -1614,7 +1462,8 @@
                 price: 'From $85',
                 badge: 'Fanpage Hit 🌱',
                 desc: '🌱 "A beautiful girl in a black dress, made by Sim Tailor 🪡🧵🌸" — Tailored to flatter your exact silhouette.',
-                image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80'
+                image: 'https://lh3.googleusercontent.com/d/1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI',
+                fallback: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80'
             },
             {
                 id: 'p3',
@@ -1623,7 +1472,8 @@
                 price: 'From $90',
                 badge: '#silkdresses',
                 desc: '100% natural Hoi An mulberry silk dress, fluid drape, custom neckline, ideal for weddings & summer evenings.',
-                image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80'
+                image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80',
+                fallback: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80'
             },
             {
                 id: 'p4',
@@ -1632,7 +1482,8 @@
                 price: 'From $140',
                 badge: 'Sartorial',
                 desc: 'Sharp peak lapels and structured shoulders inspired by Italian bespoke tailoring, finished in 24–48 hours.',
-                image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80'
+                image: 'https://lh3.googleusercontent.com/d/1GxtnLxagsL82-9aOn260VjMYYsouZH9J',
+                fallback: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80'
             },
             {
                 id: 'p5',
@@ -1704,32 +1555,36 @@
                 price: 'From $210',
                 badge: 'Pinned Post ❤️',
                 desc: 'Inspired by our pinned fanpage post "Cặp đôi hoàn cảnh 🇻🇳🇩🇰" — Coordinated suit and dress for couples.',
-                image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'
+                image: 'https://lh3.googleusercontent.com/d/1GxtnLxagsL82-9aOn260VjMYYsouZH9J',
+                fallback: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'
             }
         ];
 
-        // 2. Authentic Fanpage Posts extracted from https://www.facebook.com/DungDesignTailor/
-        const defaultFanpagePosts = [
+        // 2. Authentic Fanpage Posts (Featuring the Google Drive storefront images + fanpage highlights)
+        const fanpagePosts = [
             {
                 id: 'fp1',
-                title: 'Black Evening Dress by Sim Tailor',
-                caption: '🌱 A beautiful girl in a black dress, made by 𝙎𝙞𝙢 𝙩𝙖𝙞𝙡𝙤𝙧🪡🧵🌸 📍 23 Le Loi Hoi An Viet Nam 📞+84906440883 #hoiansuit #simtailor',
-                tag: '8h • Public • FB: Sim Tailor',
-                image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80'
+                title: 'Custom Suit & Polka-Dot Dress at 23 Lê Lợi',
+                caption: '🌱 Tailor-made double-breasted suit & halter dress made by 𝙎𝙞𝙢 𝙩𝙖𝙞𝙡𝙤𝙧🪡🧵🌸 📍 23 Le Loi Hoi An Viet Nam 📞+84906440883 #hoiansuit #simtailor',
+                tag: 'New • FB: Sim Tailor',
+                image: 'https://lh3.googleusercontent.com/d/1GxtnLxagsL82-9aOn260VjMYYsouZH9J',
+                fallback: 'https://drive.google.com/thumbnail?id=1GxtnLxagsL82-9aOn260VjMYYsouZH9J&sz=w1600'
             },
             {
                 id: 'fp2',
-                title: '15 Years of Bespoke Experience',
-                caption: '𝙃𝙚𝙡𝙡𝙤 𝙚𝙫𝙚𝙧𝙮𝙤𝙣𝙚, 𝙄 𝙖𝙢 𝙎𝙞𝙢 𝙩𝙖𝙞𝙡𝙤𝙧, 𝙬𝙞𝙩𝙝 15 𝙮𝙚𝙖𝙧𝙨 𝙤𝙛 𝙚𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙚. 🪡🧵🌸 📍 23 Le Loi Hoi An 📞+84906440883 #simbespoketailorhoian',
-                tag: '5d • Public • Master Tailor Sim',
-                image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80'
+                title: 'Bespoke Silk Evening Gowns & Cheongsam',
+                caption: '✨ Lovely ladies in custom silk dresses & brocade gown crafted at 𝙎𝙞𝙢 𝘽𝙚𝙨𝙥𝙤𝙠𝙚 𝙏𝙖𝙞𝙡𝙤𝙧 🪡🧵🌸 📍 23 Le Loi Hoi An 📞+84906440883',
+                tag: '2d • Public • Silk Couture',
+                image: 'https://lh3.googleusercontent.com/d/1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI',
+                fallback: 'https://drive.google.com/thumbnail?id=1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI&sz=w1600'
             },
             {
                 id: 'fp3',
-                title: 'Tailor Made Suits By Us ✨',
-                caption: 'Tailor made suits by us ✨✨✨ 🪡🧵 Sim Bespoke Tailor Hoi An 📍 23 Le Loi Hoi An Viet Nam 🇻🇳 #simtailor #hoiansuit #suit #custom',
-                tag: '2w • Public • Custom Suits',
-                image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80'
+                title: '15 Years of Bespoke Experience ✨',
+                caption: '𝙃𝙚𝙡𝙡𝙤 𝙚𝙫𝙚𝙧𝙮𝙤𝙣𝙚, 𝙄 𝙖𝙢 𝙎𝙞𝙢 𝙩𝙖𝙞𝙡𝙤𝙧, 𝙬𝙞𝙩𝙝 15 𝙮𝙚𝙖𝙧𝙨 𝙤𝙛 𝙚𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙚. 🪡🧵🌸 📍 23 Le Loi Hoi An Viet Nam 🇻🇳 #simtailor #hoiansuit',
+                tag: '5d • Master Tailor Sim',
+                image: 'https://i.ytimg.com/vi/XQ1tiNhU2KQ/hqdefault.jpg',
+                fallback: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80'
             },
             {
                 id: 'fp4',
@@ -1768,8 +1623,6 @@
             }
         ];
 
-        let products = [...defaultProducts];
-        let fanpagePosts = [...defaultFanpagePosts];
         let bag = [];
         let currentCategory = 'all';
         let activeProductForModal = null;
@@ -1780,42 +1633,43 @@
             const grid = document.getElementById('products-grid');
             const filtered = category === 'all' ? products : products.filter(p => p.category === category);
 
-            // Update tab styles (nhỏ gọn & căn đều 4 nút danh mục)
+            // Update tab styles
             ['all', 'men', 'women', 'family'].forEach(cat => {
                 const btn = document.getElementById('tab-' + cat);
                 if (btn) {
                     if (cat === category) {
-                        btn.className = 'shop-tab w-full px-3 py-2 rounded-full text-[11px] sm:text-xs font-semibold transition bg-charcoal-900 text-white shadow-md text-center truncate';
+                        btn.className = 'shop-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition bg-charcoal-900 text-white shadow-md';
                     } else {
-                        btn.className = 'shop-tab w-full px-3 py-2 rounded-full text-[11px] sm:text-xs font-semibold transition bg-stone-100 text-charcoal-800 hover:bg-gold-100 text-center truncate';
+                        btn.className = 'shop-tab px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition bg-stone-100 text-charcoal-800 hover:bg-gold-100';
                     }
                 }
             });
 
             grid.innerHTML = filtered.map(item => `
-                <div class="card-zoom bg-ivory rounded-2xl overflow-hidden border border-gold-200/80 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group min-w-0">
+                <div class="card-zoom bg-ivory rounded-2xl overflow-hidden border border-gold-200/80 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between group">
                     <div>
-                        <div class="relative h-40 sm:h-72 overflow-hidden bg-stone-200">
+                        <div class="relative h-48 sm:h-72 overflow-hidden bg-stone-200">
                             <img id="prod-img-${item.id}" src="${item.image}" 
-                                 onerror="this.src='https://placehold.co/600x750/1f1e1c/c28a3b?text=${encodeURIComponent(item.title)}'"
+                                 referrerpolicy="no-referrer"
+                                 onerror="this.onerror=null; this.src='${item.fallback || 'https://placehold.co/600x750/1f1e1c/c28a3b?text=' + encodeURIComponent(item.title)}'"
                                  alt="${item.title}" class="zoom-img w-full h-full object-cover">
-                            <span class="absolute top-2 left-2 sm:top-3 sm:left-3 px-2 sm:px-3 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[9px] sm:text-[11px] font-semibold backdrop-blur-sm">
+                            <span class="absolute top-2.5 left-2.5 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[10px] sm:text-[11px] font-semibold backdrop-blur-sm">
                                 ${item.badge}
                             </span>
                         </div>
-                        <div class="p-2.5 sm:p-5">
-                            <div class="flex flex-wrap items-center justify-between gap-1 text-[9px] sm:text-xs text-gold-700 font-bold uppercase tracking-wider">
-                                <span class="truncate">${item.category === 'men' ? "Men's" : item.category === 'women' ? "Women's" : "Family"}</span>
-                                <span class="text-[11px] sm:text-sm text-charcoal-900 font-extrabold">${item.price}</span>
+                        <div class="p-3.5 sm:p-5">
+                            <div class="flex items-center justify-between text-[10px] sm:text-xs text-gold-700 font-bold uppercase tracking-wider">
+                                <span class="truncate pr-1">${item.category === 'men' ? "Men's Bespoke" : item.category === 'women' ? "Women Luxurious" : "Family & Couple"}</span>
+                                <span class="text-xs sm:text-sm text-charcoal-900 shrink-0">${item.price}</span>
                             </div>
-                            <h3 class="font-serif-luxury text-xs sm:text-lg font-bold text-charcoal-900 mt-1 leading-snug line-clamp-2">${item.title}</h3>
-                            <p class="text-[10px] sm:text-xs text-stone-600 mt-1 sm:mt-2 leading-snug sm:leading-relaxed line-clamp-2">${item.desc}</p>
+                            <h3 class="font-serif-luxury text-sm sm:text-lg font-bold text-charcoal-900 mt-1 line-clamp-2">${item.title}</h3>
+                            <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 sm:mt-2 leading-relaxed line-clamp-2">${item.desc}</p>
                         </div>
                     </div>
-                    <div class="px-2.5 pb-2.5 sm:px-5 sm:pb-5 pt-1 flex items-center">
-                        <button onclick="openCustomizerModal('${item.id}')" class="w-full py-2 sm:py-2.5 px-2 rounded-xl bg-charcoal-900 hover:bg-gold-600 text-white text-[10px] sm:text-xs font-semibold tracking-normal sm:tracking-wider uppercase transition flex items-center justify-center gap-1">
+                    <div class="px-3.5 pb-3.5 sm:px-5 sm:pb-5 pt-1 flex items-center gap-2">
+                        <button onclick="openCustomizerModal('${item.id}')" class="w-full py-2 sm:py-2.5 rounded-xl bg-charcoal-900 hover:bg-gold-600 text-white text-[11px] sm:text-xs font-semibold tracking-wider uppercase transition flex items-center justify-center gap-1.5">
                             <i class="fa-solid fa-sliders"></i>
-                            <span class="truncate">Customize & Order</span>
+                            <span>Customize & Order</span>
                         </button>
                     </div>
                 </div>
@@ -1832,24 +1686,25 @@
             grid.innerHTML = fanpagePosts.map(post => `
                 <div class="bg-white rounded-2xl overflow-hidden border border-gold-200/80 shadow-sm hover:shadow-xl transition flex flex-col justify-between group">
                     <div>
-                        <div class="relative h-44 sm:h-72 overflow-hidden bg-stone-200">
+                        <div class="relative h-48 sm:h-72 overflow-hidden bg-stone-200">
                             <img id="fp-img-${post.id}" src="${post.image}" 
-                                 onerror="this.src='https://placehold.co/600x750/1f1e1c/c28a3b?text=Sim+Tailor+Fanpage'"
+                                 referrerpolicy="no-referrer"
+                                 onerror="this.onerror=null; this.src='${post.fallback || 'https://placehold.co/600x750/1f1e1c/c28a3b?text=Sim+Tailor+Fanpage'}'"
                                  alt="${post.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                            <div class="absolute top-2 left-2 sm:top-3 sm:left-3 bg-blue-600/90 text-white text-[9px] sm:text-[10px] font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full flex items-center gap-1 backdrop-blur-sm max-w-[90%]">
-                                <i class="fa-brands fa-facebook shrink-0"></i>
-                                <span class="truncate">${post.tag}</span>
+                            <div class="absolute top-2.5 left-2.5 bg-blue-600/90 text-white text-[9px] sm:text-[10px] font-semibold px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full flex items-center gap-1 backdrop-blur-sm">
+                                <i class="fa-brands fa-facebook"></i>
+                                <span class="truncate max-w-[120px] sm:max-w-none">${post.tag}</span>
                             </div>
                         </div>
-                        <div class="p-3 sm:p-4">
-                            <h4 class="font-serif-luxury font-bold text-xs sm:text-base text-charcoal-900 leading-snug line-clamp-2">${post.title}</h4>
-                            <p class="text-[11px] sm:text-xs text-stone-600 mt-1 sm:mt-1.5 leading-snug sm:leading-relaxed line-clamp-3">${post.caption}</p>
+                        <div class="p-3.5 sm:p-4">
+                            <h4 class="font-serif-luxury font-bold text-sm sm:text-base text-charcoal-900 line-clamp-2">${post.title}</h4>
+                            <p class="text-[11px] sm:text-xs text-stone-600 mt-1.5 leading-relaxed line-clamp-3">${post.caption}</p>
                         </div>
                     </div>
-                    <div class="px-3 pb-3 sm:px-4 sm:pb-4 pt-2 border-t border-stone-100 flex items-center justify-between text-[10px] sm:text-[11px] text-gold-700 font-semibold">
-                        <span class="truncate">📍 23 Lê Lợi</span>
-                        <a href="https://wa.me/84906440883?text=${encodeURIComponent('Hi Sim Tailor! I love this outfit from your Fanpage: ' + post.title)}" target="_blank" class="hover:underline flex items-center gap-1 text-green-700 shrink-0">
-                            <i class="fa-brands fa-whatsapp"></i> Order
+                    <div class="px-3.5 pb-3.5 sm:px-4 sm:pb-4 pt-2 border-t border-stone-100 flex items-center justify-between text-[10px] sm:text-[11px] text-gold-700 font-semibold">
+                        <span>📍 23 Lê Lợi</span>
+                        <a href="https://wa.me/84906440883?text=${encodeURIComponent('Hi Sim Tailor! I love this outfit from your Fanpage: ' + post.title)}" target="_blank" class="hover:underline flex items-center gap-1 text-green-700">
+                            <i class="fa-brands fa-whatsapp"></i> Order Look
                         </a>
                     </div>
                 </div>
@@ -2053,7 +1908,7 @@ Booking / Inquiry from simtailorhoian.com:
             res.innerHTML = matches.map(m => `
                 <div class="py-2.5 flex items-center justify-between gap-3">
                     <div class="flex items-center gap-3">
-                        <img src="${m.image}" class="w-11 h-11 rounded-lg object-cover">
+                        <img src="${m.image}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='${m.fallback || 'https://placehold.co/100x100/1f1e1c/c28a3b?text=Sim'}'" class="w-11 h-11 rounded-lg object-cover">
                         <div>
                             <p class="text-xs font-bold text-charcoal-900">${m.title}</p>
                             <p class="text-[11px] text-gold-700 font-semibold">${m.price}</p>
@@ -2117,11 +1972,10 @@ Booking / Inquiry from simtailorhoian.com:
             en: {
                 nav_home: 'Home',
                 nav_about: 'About Us',
-                nav_video: 'Video & Gallery',
                 nav_process: 'Our Process',
                 nav_measure: 'How To Measure',
                 nav_shop: 'Cloth Shop',
-                nav_lookbook: 'Lookbook',
+                nav_lookbook: 'Fanpage Lookbook',
                 nav_blogs: 'Blogs',
                 nav_reviews: 'Reviews',
                 nav_contact: 'Contact',
@@ -2138,8 +1992,6 @@ Booking / Inquiry from simtailorhoian.com:
                 pillar3_desc: 'Interactive body measurement guide to send your exact size online for worldwide custom tailoring.',
                 pillar4_title: 'CUSTOMER LOOKBOOK',
                 pillar4_desc: 'Real photos & stories from our Facebook page: happy clients from France, Iceland, Denmark & Vietnam.',
-                media_heading: 'Official Video & 3 Featured Studio Photos',
-                media_sub: 'Watch our real bespoke tailoring studio video at 23 Lê Lợi, Hội An alongside 3 featured photos from our official Google Drive gallery.',
                 shop_heading: 'CLOTH SHOP',
                 lookbook_heading: 'Customer Lookbook & Fanpage Moments',
                 process_heading: 'Our Bespoke Process',
@@ -2155,7 +2007,6 @@ Booking / Inquiry from simtailorhoian.com:
             vi: {
                 nav_home: 'Trang Chủ',
                 nav_about: 'Về Chúng Tôi',
-                nav_video: 'Video & 3 Ảnh',
                 nav_process: 'Quy Trình May',
                 nav_measure: 'Cách Lấy Số Đo',
                 nav_shop: 'Cửa Hàng May Đo',
@@ -2176,8 +2027,6 @@ Booking / Inquiry from simtailorhoian.com:
                 pillar3_desc: 'Công cụ nhập số đo trực tuyến tiện lợi để đặt may từ xa qua WhatsApp/Zalo 0906.440.883.',
                 pillar4_title: 'ALBUM FANPAGE',
                 pillar4_desc: 'Hình ảnh thực tế từ Fanpage Sim Tailor: khách hàng từ Pháp, Iceland, Đan Mạch và Việt Nam.',
-                media_heading: 'Video Thực Tế & Bộ 3 Ảnh Nổi Bật Tại Sim Tailor',
-                media_sub: 'Khám phá video thực tế tại tiệm may Sim Tailor (23 Lê Lợi, Hội An) cùng bộ 3 hình ảnh nổi bật từ thư mục Google Drive chính thức.',
                 shop_heading: 'CỬA HÀNG MAY ĐO (CLOTH SHOP)',
                 lookbook_heading: 'Album Khách Hàng & Bài Đăng Fanpage Sim Tailor',
                 process_heading: 'Quy Trình May Đo 4 Bước Chuẩn Mực',
@@ -2186,8 +2035,8 @@ Booking / Inquiry from simtailorhoian.com:
                 reviews_heading: 'Khách Hàng Quốc Tế Đánh Giá',
                 contact_heading: 'Sim Tailor – 23 Lê Lợi, Hội An',
                 cat_all: 'Tất Cả Bộ Sưu Tập',
-                cat_men: 'Trang Phục Nam',
-                cat_women: 'Trang Phục Nữ (Đầm Lụa)',
+                cat_men: 'Trang Phục Nam (Vest & Sơ Mi)',
+                cat_women: 'Trang Phục Nữ Cao Cấp (Đầm Lụa)',
                 cat_family: 'Set Gia Đình & Cặp Đôi'
             }
         };
@@ -2231,9 +2080,11 @@ Booking / Inquiry from simtailorhoian.com:
 
         // Initialize on Window Load
         window.onload = function() {
+            // Clear any old cached images in localStorage so the new Google Drive photos show immediately
+            localStorage.removeItem('simtailor_products');
+            localStorage.removeItem('simtailor_fanpage');
             renderProducts('all');
             renderFanpageLookbook();
-            loadDriveFolderImages();
             // Auto advance hero slider every 6 seconds
             setInterval(nextSlide, 6000);
         };
