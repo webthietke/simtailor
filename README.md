@@ -700,6 +700,155 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Bộ Sưu Tập Đồ Cưới May Đo (Bespoke Wedding Gallery - Chuẩn 3 Cột Trên Điện Thoại) -->
+            <div class="mt-10 sm:mt-12 pt-8 border-t border-gold-200/60">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5">
+                    <div>
+                        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-gold-100 text-gold-800 text-[10px] sm:text-xs font-semibold uppercase tracking-wider mb-1">
+                            <i class="fa-solid fa-rings-wedding text-gold-600"></i>
+                            <span data-i18n="wedding_badge">BESPOKE WEDDING & BRIDAL COLLECTION</span>
+                        </div>
+                        <h4 class="font-serif-luxury text-xl sm:text-2xl font-bold text-charcoal-900" data-i18n="wedding_heading">
+                            Bespoke Wedding Suits & Bridal Dresses
+                        </h4>
+                    </div>
+                    <a href="https://wa.me/84906440883?text=Hello%20Sim%20Tailor!%20I%20would%20like%20to%20inquire%20about%20Bespoke%20Wedding%20Outfits." target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-700 hover:text-gold-600">
+                        <i class="fa-brands fa-whatsapp text-green-600 text-sm"></i>
+                        <span data-i18n="wedding_cta">Book Wedding Fitting (0906.440.883)</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <!-- Lưới 3 cột tối ưu trên điện thoại và máy tính -->
+                <div id="wedding-gallery-grid" class="three-photos-row">
+                    <!-- Wedding Photo 1: 1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-0" 
+                                 src="https://drive.google.com/thumbnail?id=1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a=w1200';"
+                                 alt="Sim Tailor Wedding Collection 1" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Wedding 01
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Wedding #1</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Bridal & Groom</p>
+                        </div>
+                    </div>
+
+                    <!-- Wedding Photo 2: 1WCTf-vjqjI-4swjQw93shwKDw5f6KeCt -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-1" 
+                                 src="https://drive.google.com/thumbnail?id=1WCTf-vjqjI-4swjQw93shwKDw5f6KeCt&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1WCTf-vjqjI-4swjQw93shwKDw5f6KeCt=w1200';"
+                                 alt="Sim Tailor Wedding Collection 2" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Wedding 02
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Wedding #2</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Tailored Suit & Gown</p>
+                        </div>
+                    </div>
+
+                    <!-- Wedding Photo 3: 1stw4bo0sPWSZujr1C9VxteOK-LE5r9To -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-2" 
+                                 src="https://drive.google.com/thumbnail?id=1stw4bo0sPWSZujr1C9VxteOK-LE5r9To&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1stw4bo0sPWSZujr1C9VxteOK-LE5r9To=w1200';"
+                                 alt="Sim Tailor Wedding Collection 3" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Wedding 03
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Wedding #3</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">23 Lê Lợi, Hội An</p>
+                        </div>
+                    </div>
+
+                    <!-- Wedding Photo 4: 10GtDgMR-O7AW80z9mGehgoxQwOIKfjN_ -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-3" 
+                                 src="https://drive.google.com/thumbnail?id=10GtDgMR-O7AW80z9mGehgoxQwOIKfjN_&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/10GtDgMR-O7AW80z9mGehgoxQwOIKfjN_=w1200';"
+                                 alt="Sim Tailor Wedding Collection 4" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Wedding 04
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Wedding #4</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Groom & Groomsmen</p>
+                        </div>
+                    </div>
+
+                    <!-- Wedding Photo 5: 1R42Yos9D85Jomlh8AC2yCZ9kyOebRmfv -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-4" 
+                                 src="https://drive.google.com/thumbnail?id=1R42Yos9D85Jomlh8AC2yCZ9kyOebRmfv&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1R42Yos9D85Jomlh8AC2yCZ9kyOebRmfv=w1200';"
+                                 alt="Sim Tailor Wedding Collection 5" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Wedding 05
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Wedding #5</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Luxury Silk & Wool</p>
+                        </div>
+                    </div>
+
+                    <!-- Wedding Photo 6: 1B42GsM2ht4NvvzBAl-Gk-cXqiO4_c7R8 -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-5" 
+                                 src="https://drive.google.com/thumbnail?id=1B42GsM2ht4NvvzBAl-Gk-cXqiO4_c7R8&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1B42GsM2ht4NvvzBAl-Gk-cXqiO4_c7R8=w1200';"
+                                 alt="Sim Tailor Wedding Collection 6" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Wedding 06
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Wedding #6</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Sim Tailor Couture</p>
+                        </div>
+                    </div>
+
+                    <!-- Wedding Photo 7: 1TDL4NOJvgZpeVHqrHDuyObszhtUZfm0N -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-6" 
+                                 src="https://drive.google.com/thumbnail?id=1TDL4NOJvgZpeVHqrHDuyObszhtUZfm0N&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1TDL4NOJvgZpeVHqrHDuyObszhtUZfm0N=w1200';"
+                                 alt="Sim Tailor Wedding Collection 7" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Wedding 07
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Wedding #7</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Made to Measure</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1582,10 +1731,34 @@
             '1hqePF8Kpppqv8KshkWzRuJATsUp4FP9f'
         ];
 
-        // Gắn trực tiếp 3 ảnh thực tế từ Google Drive vào 3 thẻ ảnh mà không bị lỗi CORS
+        // Danh sách 7 File ID ảnh Đồ Cưới (Bespoke Wedding Collection) từ Google Drive
+        const WEDDING_DRIVE_PHOTO_IDS = [
+            '1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a',
+            '1WCTf-vjqjI-4swjQw93shwKDw5f6KeCt',
+            '1stw4bo0sPWSZujr1C9VxteOK-LE5r9To',
+            '10GtDgMR-O7AW80z9mGehgoxQwOIKfjN_',
+            '1R42Yos9D85Jomlh8AC2yCZ9kyOebRmfv',
+            '1B42GsM2ht4NvvzBAl-Gk-cXqiO4_c7R8',
+            '1TDL4NOJvgZpeVHqrHDuyObszhtUZfm0N'
+        ];
+
+        // Gắn trực tiếp ảnh thực tế từ Google Drive vào các thẻ ảnh mà không bị lỗi CORS
         function loadDriveFolderImages() {
             DRIVE_PHOTO_IDS.forEach((fileId, index) => {
                 const imgEl = document.getElementById('drive-img-' + index);
+                if (imgEl) {
+                    imgEl.src = `https://drive.google.com/thumbnail?id=${fileId}&sz=w1200`;
+                    imgEl.onerror = function() {
+                        this.onerror = function() {
+                            this.src = `https://drive.google.com/uc?export=view&id=${fileId}`;
+                        };
+                        this.src = `https://lh3.googleusercontent.com/d/${fileId}=w1200`;
+                    };
+                }
+            });
+
+            WEDDING_DRIVE_PHOTO_IDS.forEach((fileId, index) => {
+                const imgEl = document.getElementById('wedding-img-' + index);
                 if (imgEl) {
                     imgEl.src = `https://drive.google.com/thumbnail?id=${fileId}&sz=w1200`;
                     imgEl.onerror = function() {
