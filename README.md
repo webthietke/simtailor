@@ -98,6 +98,15 @@
         .pulse-gold {
             animation: pulse-ring 2s infinite;
         }
+        /* Hiệu ứng làm nổi bật Logo Sim Tailor */
+        .logo-prominent {
+            box-shadow: 0 0 0 2px #faf7f2, 0 0 0 4px #c28a3b, 0 8px 20px -2px rgba(194, 138, 59, 0.55);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+        .group:hover .logo-prominent {
+            transform: scale(1.06);
+            box-shadow: 0 0 0 2px #faf7f2, 0 0 0 4px #cea059, 0 10px 25px 0 rgba(194, 138, 59, 0.75);
+        }
         /* Chia 2 cột trên điện thoại và căn đều 4 cột chuẩn bên trong khung máy tính */
         .mobile-two-cols {
             display: grid !important;
@@ -194,30 +203,23 @@
     </div>
 
     <!-- ================= MAIN HEADER & NAVIGATION (CĂN ĐỀU TRONG KHUNG MÁY TÍNH) ================= -->
-    <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-gold-200/60 transition-all">
+    <header id="main-header" class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-md border-b border-gold-300/80 transition-all">
         <div class="max-w-7xl mx-auto px-3 sm:px-5 lg:px-6">
-            <div class="flex items-center justify-between h-14 sm:h-16 gap-2">
+            <div class="flex items-center justify-between h-16 sm:h-20 gap-2">
 
-                <!-- Brand Logo (Thu nhỏ gọn gàng trên máy tính) -->
-                <a href="#" class="inline-flex items-center gap-1.5 sm:gap-2 group shrink-0">
-                    <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-charcoal-900 border border-gold-500 flex items-center justify-center shadow-sm group-hover:border-gold-400 transition shrink-0">
-                        <svg viewBox="0 0 64 64" class="w-4 h-4 sm:w-5 sm:h-5 block">
-                            <circle cx="32" cy="32" r="28" fill="none" stroke="#c28a3b" stroke-width="1" stroke-dasharray="3 2.5" opacity="0.75"/>
-                            <circle cx="32" cy="32" r="24" fill="none" stroke="#cea059" stroke-width="0.6" opacity="0.4"/>
-                            <g transform="translate(32, 32)" fill="none" stroke="#e5c17c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="-7" cy="-6" r="4.8"/>
-                                <circle cx="-7" cy="6" r="4.8"/>
-                                <line x1="-2.5" y1="-3" x2="11" y2="6.5"/>
-                                <line x1="-2.5" y1="3" x2="11" y2="-6.5"/>
-                                <circle cx="1.5" cy="0" r="1.2" fill="#e5c17c" stroke="none"/>
-                            </g>
-                        </svg>
+                <!-- Brand Logo (Nổi bật với ảnh Logo thực tế từ Google Drive) -->
+                <a href="#" class="inline-flex items-center gap-2.5 sm:gap-3 group shrink-0 py-1">
+                    <div class="logo-prominent w-11 h-11 sm:w-14 sm:h-14 rounded-full bg-charcoal-950 flex items-center justify-center overflow-hidden shrink-0">
+                        <img src="https://drive.google.com/thumbnail?id=1ko0BGjcxaymrEWQk9eSPlLgjDppDxgzA&sz=w800"
+                             onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1ko0BGjcxaymrEWQk9eSPlLgjDppDxgzA=w800';"
+                             alt="Sim Tailor Hoi An Official Logo"
+                             class="w-full h-full object-cover scale-105">
                     </div>
                     <div class="flex flex-col justify-center">
-                        <span class="font-serif-luxury text-xs sm:text-sm xl:text-[15px] font-bold tracking-wider text-charcoal-900 whitespace-nowrap leading-none">SIM TAILOR</span>
-                        <div class="flex items-center gap-1 mt-0.5">
-                            <span class="w-1.5 h-[1px] bg-gold-500"></span>
-                            <span class="text-[6.5px] sm:text-[7px] uppercase tracking-[0.1em] text-gold-700 font-bold whitespace-nowrap leading-none">HỘI AN • EST. 2011</span>
+                        <span class="font-serif-luxury text-sm sm:text-lg xl:text-xl font-extrabold tracking-wider text-charcoal-950 whitespace-nowrap leading-none drop-shadow-sm group-hover:text-gold-700 transition">SIM TAILOR</span>
+                        <div class="inline-flex items-center gap-1.5 mt-1 px-2 py-0.5 rounded-full bg-gradient-to-r from-charcoal-900 to-charcoal-800 border border-gold-400/70 shadow-sm w-fit">
+                            <span class="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse"></span>
+                            <span class="text-[7px] sm:text-[8px] uppercase tracking-[0.12em] text-gold-300 font-bold whitespace-nowrap leading-none">HỘI AN • EST. 2011</span>
                         </div>
                     </div>
                 </a>
@@ -701,6 +703,121 @@
                 </div>
             </div>
 
+            <!-- Bộ 3 Video Thực Tế & Shorts Bổ Sung Tại Sim Tailor (8bAcjOfRPHE, ksgl0sSQSxc, OgiYZF8Xudk) -->
+            <div class="mt-8 sm:mt-10 pt-8 border-t border-gold-200/60">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5">
+                    <div>
+                        <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-red-50 text-red-700 border border-red-200 text-[10px] sm:text-xs font-semibold uppercase tracking-wider mb-1">
+                            <i class="fa-brands fa-youtube text-red-600"></i>
+                            <span>MORE BESPOKE VIDEOS & SHORTS • SIM TAILOR HOI AN</span>
+                        </div>
+                        <h4 class="font-serif-luxury text-xl sm:text-2xl font-bold text-charcoal-900">
+                            Behind The Scenes & Client Fitting Moments
+                        </h4>
+                    </div>
+                    <a href="https://www.youtube.com/watch?v=8bAcjOfRPHE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gold-700 hover:text-gold-600">
+                        <i class="fa-brands fa-youtube text-red-600 text-sm"></i>
+                        <span>View All on YouTube</span>
+                        <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                    </a>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                    <!-- Video Bổ Sung 1: https://www.youtube.com/watch?v=8bAcjOfRPHE -->
+                    <div class="bg-charcoal-900 rounded-2xl p-3.5 sm:p-4 border border-gold-500/40 shadow-lg flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-gold-400">
+                                    <i class="fa-brands fa-youtube text-red-500"></i>
+                                    <span>Sim Tailor Video #02</span>
+                                </span>
+                                <a href="https://www.youtube.com/watch?v=8bAcjOfRPHE" target="_blank" rel="noopener noreferrer" class="text-[10px] text-stone-300 hover:text-gold-300 underline flex items-center gap-1">
+                                    <span>Open Link</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
+                                </a>
+                            </div>
+                            <div class="relative w-full overflow-hidden rounded-xl bg-black aspect-video border border-gold-500/30">
+                                <iframe 
+                                    class="w-full h-full"
+                                    src="https://www.youtube.com/embed/8bAcjOfRPHE?rel=0&modestbranding=1&playsinline=1" 
+                                    title="Sim Tailor Hoi An Bespoke Video 2"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-2.5 border-t border-stone-800 flex items-center justify-between text-[11px] text-stone-300">
+                            <span class="font-serif-luxury font-bold text-white truncate">Bespoke Tailoring Story</span>
+                            <span class="text-gold-400 font-semibold shrink-0">23 Lê Lợi</span>
+                        </div>
+                    </div>
+
+                    <!-- Video Bổ Sung 2 (Shorts): https://www.youtube.com/shorts/ksgl0sSQSxc -->
+                    <div class="bg-charcoal-900 rounded-2xl p-3.5 sm:p-4 border border-gold-500/40 shadow-lg flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-gold-400">
+                                    <i class="fa-brands fa-youtube text-red-500"></i>
+                                    <span>Sim Tailor Shorts #01</span>
+                                </span>
+                                <a href="https://www.youtube.com/shorts/ksgl0sSQSxc" target="_blank" rel="noopener noreferrer" class="text-[10px] text-stone-300 hover:text-gold-300 underline flex items-center gap-1">
+                                    <span>Watch Shorts</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
+                                </a>
+                            </div>
+                            <div class="relative w-full overflow-hidden rounded-xl bg-black aspect-video border border-gold-500/30">
+                                <iframe 
+                                    class="w-full h-full"
+                                    src="https://www.youtube.com/embed/ksgl0sSQSxc?rel=0&modestbranding=1&playsinline=1" 
+                                    title="Sim Tailor Hoi An Shorts 1"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-2.5 border-t border-stone-800 flex items-center justify-between text-[11px] text-stone-300">
+                            <span class="font-serif-luxury font-bold text-white truncate">Custom Fitting Reel #1</span>
+                            <span class="text-gold-400 font-semibold shrink-0">0906.440.883</span>
+                        </div>
+                    </div>
+
+                    <!-- Video Bổ Sung 3 (Shorts): https://www.youtube.com/shorts/OgiYZF8Xudk -->
+                    <div class="bg-charcoal-900 rounded-2xl p-3.5 sm:p-4 border border-gold-500/40 shadow-lg flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center justify-between gap-2 mb-2.5">
+                                <span class="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-gold-400">
+                                    <i class="fa-brands fa-youtube text-red-500"></i>
+                                    <span>Sim Tailor Shorts #02</span>
+                                </span>
+                                <a href="https://www.youtube.com/shorts/OgiYZF8Xudk" target="_blank" rel="noopener noreferrer" class="text-[10px] text-stone-300 hover:text-gold-300 underline flex items-center gap-1">
+                                    <span>Watch Shorts</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[8px]"></i>
+                                </a>
+                            </div>
+                            <div class="relative w-full overflow-hidden rounded-xl bg-black aspect-video border border-gold-500/30">
+                                <iframe 
+                                    class="w-full h-full"
+                                    src="https://www.youtube.com/embed/OgiYZF8Xudk?rel=0&modestbranding=1&playsinline=1" 
+                                    title="Sim Tailor Hoi An Shorts 2"
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    referrerpolicy="strict-origin-when-cross-origin"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                        <div class="mt-3 pt-2.5 border-t border-stone-800 flex items-center justify-between text-[11px] text-stone-300">
+                            <span class="font-serif-luxury font-bold text-white truncate">Custom Fitting Reel #2</span>
+                            <span class="text-gold-400 font-semibold shrink-0">Sim Tailor</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Bộ Sưu Tập Đồ Cưới May Đo (Bespoke Wedding Gallery - Chuẩn 3 Cột Trên Điện Thoại) -->
             <div class="mt-10 sm:mt-12 pt-8 border-t border-gold-200/60">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5">
@@ -1139,8 +1256,10 @@
                 <!-- Blog 1 -->
                 <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-gold-200/70 flex flex-col justify-between group">
                     <div>
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80" alt="Custom Suit Guide Hoi An" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="relative h-56 overflow-hidden bg-stone-200">
+                            <img id="blog-img-0" src="https://drive.google.com/thumbnail?id=1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a&sz=w1200"
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a=w1200';"
+                                 alt="Custom Suit Guide Hoi An" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute top-4 left-4 bg-charcoal-900/90 text-gold-400 rounded-xl px-3 py-1.5 text-center leading-tight border border-gold-500/40">
                                 <span class="block text-lg font-bold font-serif-luxury">01</span>
                                 <span class="text-[10px] uppercase tracking-wider">Oct</span>
@@ -1167,8 +1286,10 @@
                 <!-- Blog 2 -->
                 <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-gold-200/70 flex flex-col justify-between group">
                     <div>
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1559592413-7cec4d0cae2b?auto=format&fit=crop&w=800&q=80" alt="23 Le Loi Hoi An Ancient Town" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="relative h-56 overflow-hidden bg-stone-200">
+                            <img id="blog-img-1" src="https://drive.google.com/thumbnail?id=1LfhNHNeeI7qhBAoyD6siRucBAz_7_dvU&sz=w1200"
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1LfhNHNeeI7qhBAoyD6siRucBAz_7_dvU=w1200';"
+                                 alt="23 Le Loi Hoi An Ancient Town" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute top-4 left-4 bg-charcoal-900/90 text-gold-400 rounded-xl px-3 py-1.5 text-center leading-tight border border-gold-500/40">
                                 <span class="block text-lg font-bold font-serif-luxury">12</span>
                                 <span class="text-[10px] uppercase tracking-wider">Aug</span>
@@ -1195,8 +1316,10 @@
                 <!-- Blog 3 -->
                 <article class="bg-white rounded-2xl overflow-hidden shadow-md border border-gold-200/70 flex flex-col justify-between group">
                     <div>
-                        <div class="relative h-56 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Protecting Your Custom Suit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="relative h-56 overflow-hidden bg-stone-200">
+                            <img id="blog-img-2" src="https://drive.google.com/thumbnail?id=1WCTf-vjqjI-4swjQw93shwKDw5f6KeCt&sz=w1200"
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1WCTf-vjqjI-4swjQw93shwKDw5f6KeCt=w1200';"
+                                 alt="Protecting Your Custom Suit" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                             <div class="absolute top-4 left-4 bg-charcoal-900/90 text-gold-400 rounded-xl px-3 py-1.5 text-center leading-tight border border-gold-500/40">
                                 <span class="block text-lg font-bold font-serif-luxury">10</span>
                                 <span class="text-[10px] uppercase tracking-wider">Mar</span>
@@ -1464,13 +1587,16 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-stone-800">
                 <!-- Col 1 -->
                 <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full bg-gold-600 text-white flex items-center justify-center">
-                            <i class="fa-solid fa-scissors"></i>
+                    <div class="flex items-center gap-3.5">
+                        <div class="logo-prominent w-14 h-14 rounded-full bg-charcoal-900 overflow-hidden flex items-center justify-center shrink-0">
+                            <img src="https://drive.google.com/thumbnail?id=1ko0BGjcxaymrEWQk9eSPlLgjDppDxgzA&sz=w800"
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1ko0BGjcxaymrEWQk9eSPlLgjDppDxgzA=w800';"
+                                 alt="Sim Tailor Logo"
+                                 class="w-full h-full object-cover scale-105">
                         </div>
                         <div>
-                            <span class="font-serif-luxury text-xl font-bold text-white tracking-wider">SIM TAILOR</span>
-                            <p class="text-[10px] uppercase tracking-widest text-gold-400">simtailorhoian.com</p>
+                            <span class="font-serif-luxury text-2xl font-extrabold text-white tracking-wider block leading-none">SIM TAILOR</span>
+                            <span class="inline-block mt-1 text-[10px] uppercase tracking-widest text-gold-400 font-bold">simtailorhoian.com</span>
                         </div>
                     </div>
                     <p class="text-xs leading-relaxed text-stone-400">
@@ -1742,12 +1868,22 @@
             '1TDL4NOJvgZpeVHqrHDuyObszhtUZfm0N'
         ];
 
+        // Ảnh chỉ định riêng cho mục "Matching Set for Sister & Brother" (chỗ khoanh đỏ)
+        const SISTER_BROTHER_PHOTO_ID = '1E7rLS95gLm8CIeH2wkLLibkLip-B0VI-';
+
+        // Thư mục Google Drive chứa bộ ảnh thực tế cho Cloth Shop đến hết trang web
+        const SHOP_AND_LOOKBOOK_FOLDER_ID = '1aSi44gNpc80EfLFGQMKA7TkImgXRyuEz';
+
+        function driveThumbUrl(fileId) {
+            return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1200`;
+        }
+
         // Gắn trực tiếp ảnh thực tế từ Google Drive vào các thẻ ảnh mà không bị lỗi CORS
         function loadDriveFolderImages() {
             DRIVE_PHOTO_IDS.forEach((fileId, index) => {
                 const imgEl = document.getElementById('drive-img-' + index);
                 if (imgEl) {
-                    imgEl.src = `https://drive.google.com/thumbnail?id=${fileId}&sz=w1200`;
+                    imgEl.src = driveThumbUrl(fileId);
                     imgEl.onerror = function() {
                         this.onerror = function() {
                             this.src = `https://drive.google.com/uc?export=view&id=${fileId}`;
@@ -1760,7 +1896,7 @@
             WEDDING_DRIVE_PHOTO_IDS.forEach((fileId, index) => {
                 const imgEl = document.getElementById('wedding-img-' + index);
                 if (imgEl) {
-                    imgEl.src = `https://drive.google.com/thumbnail?id=${fileId}&sz=w1200`;
+                    imgEl.src = driveThumbUrl(fileId);
                     imgEl.onerror = function() {
                         this.onerror = function() {
                             this.src = `https://drive.google.com/uc?export=view&id=${fileId}`;
@@ -1769,9 +1905,76 @@
                     };
                 }
             });
+
+            // Tự động đồng bộ toàn bộ danh sách ảnh trong folder Google Drive 1aSi44gNpc80EfLFGQMKA7TkImgXRyuEz
+            syncImagesFromGoogleDriveFolder(SHOP_AND_LOOKBOOK_FOLDER_ID);
         }
 
-        // 1. Cloth Shop Catalog (Combining simonthetailor.com items + DungDesignTailor fanpage specialties)
+        async function syncImagesFromGoogleDriveFolder(folderId) {
+            const folderEmbedUrl = `https://drive.google.com/embeddedfolderview?id=${folderId}#list`;
+            const proxyUrls = [
+                `https://api.allorigins.win/raw?url=${encodeURIComponent(folderEmbedUrl)}`,
+                `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(folderEmbedUrl)}`,
+                `https://corsproxy.io/?${encodeURIComponent(folderEmbedUrl)}`
+            ];
+
+            for (const proxy of proxyUrls) {
+                try {
+                    const response = await fetch(proxy);
+                    if (!response.ok) continue;
+                    const htmlText = await response.text();
+                    const matches = [...htmlText.matchAll(/\/file\/d\/([a-zA-Z0-9_-]{25,})/g)];
+                    const entryMatches = [...htmlText.matchAll(/id="entry-([a-zA-Z0-9_-]{25,})"/g)];
+                    const uniqueIds = [...new Set([
+                        ...matches.map(m => m[1]),
+                        ...entryMatches.map(m => m[1])
+                    ])].filter(id => id !== folderId && id !== '1ko0BGjcxaymrEWQk9eSPlLgjDppDxgzA');
+
+                    if (uniqueIds.length > 0) {
+                        // Cập nhật ảnh thực tế từ thư mục cho toàn bộ sản phẩm Cloth Shop
+                        products.forEach((prod, idx) => {
+                            if (prod.id === 'p11') {
+                                prod.image = driveThumbUrl(SISTER_BROTHER_PHOTO_ID);
+                            } else {
+                                const fid = uniqueIds[idx % uniqueIds.length];
+                                prod.image = driveThumbUrl(fid);
+                            }
+                        });
+
+                        // Cập nhật ảnh thực tế cho Fanpage Lookbook (riêng fp6 giữ cố định ảnh khoanh đỏ 1E7rLS95gLm8CIeH2wkLLibkLip-B0VI-)
+                        fanpagePosts.forEach((post, idx) => {
+                            if (post.id === 'fp6') {
+                                post.image = driveThumbUrl(SISTER_BROTHER_PHOTO_ID);
+                            } else {
+                                const fid = uniqueIds[(idx + 4) % uniqueIds.length];
+                                post.image = driveThumbUrl(fid);
+                            }
+                        });
+
+                        // Cập nhật 3 ảnh bài viết Blogs ở cuối trang
+                        [0, 1, 2].forEach((bIdx) => {
+                            const blogImg = document.getElementById('blog-img-' + bIdx);
+                            if (blogImg) {
+                                const fid = uniqueIds[(bIdx + 2) % uniqueIds.length];
+                                blogImg.src = driveThumbUrl(fid);
+                                blogImg.onerror = function() {
+                                    this.onerror = null;
+                                    this.src = `https://lh3.googleusercontent.com/d/${fid}=w1200`;
+                                };
+                            }
+                        });
+
+                        renderProducts(currentCategory);
+                        renderFanpageLookbook();
+                        break;
+                    }
+                } catch (err) {
+                    // Nếu proxy không phản hồi thì dùng bộ ảnh thực tế Google Drive đã gắn sẵn bên dưới
+                }
+            }
+        }
+
+        // 1. Cloth Shop Catalog (Đã thay toàn bộ sang ảnh thực tế từ Google Drive của Sim Tailor)
         const defaultProducts = [
             {
                 id: 'p1',
@@ -1780,7 +1983,7 @@
                 price: 'From $145',
                 badge: 'Bestseller',
                 desc: 'Classic bespoke 3-piece suit (jacket, vest, trousers) crafted in breathable wool with custom silk lining.',
-                image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1Um7tl2Nfbkq5-lXckZV5Rx3nphV-w9jI&sz=w1200'
             },
             {
                 id: 'p2',
@@ -1789,7 +1992,7 @@
                 price: 'From $85',
                 badge: 'Fanpage Hit 🌱',
                 desc: '🌱 "A beautiful girl in a black dress, made by Sim Tailor 🪡🧵🌸" — Tailored to flatter your exact silhouette.',
-                image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1RTw4FMaED7girFamAKt56bNogrPfERBK&sz=w1200'
             },
             {
                 id: 'p3',
@@ -1798,7 +2001,7 @@
                 price: 'From $90',
                 badge: '#silkdresses',
                 desc: '100% natural Hoi An mulberry silk dress, fluid drape, custom neckline, ideal for weddings & summer evenings.',
-                image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1LfhNHNeeI7qhBAoyD6siRucBAz_7_dvU&sz=w1200'
             },
             {
                 id: 'p4',
@@ -1807,7 +2010,7 @@
                 price: 'From $140',
                 badge: 'Sartorial',
                 desc: 'Sharp peak lapels and structured shoulders inspired by Italian bespoke tailoring, finished in 24–48 hours.',
-                image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a&sz=w1200'
             },
             {
                 id: 'p5',
@@ -1816,7 +2019,7 @@
                 price: 'From $95',
                 badge: 'Fanpage New ✨',
                 desc: '✨ "Top & skirt made by us 🙏☺️ Bespoke Tailor" — Elegant two-piece co-ord set in premium linen or silk.',
-                image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1GxtnLxagsL82-9aOn260VjMYYsouZH9J&sz=w1200'
             },
             {
                 id: 'p6',
@@ -1825,7 +2028,7 @@
                 price: 'From $160',
                 badge: 'Black Tie',
                 desc: 'Satin shawl or peak lapel tuxedo crafted for grooms and gala dinners with hand-finished details.',
-                image: 'https://images.unsplash.com/photo-1555069519-127aadedf1ee?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1WCTf-vjqjI-4swjQw93shwKDw5f6KeCt&sz=w1200'
             },
             {
                 id: 'p7',
@@ -1834,7 +2037,7 @@
                 price: 'From $120',
                 badge: 'Women Suit',
                 desc: 'Bespoke women blazer and high-waisted trousers tailored in fine wool, linen, or silk blend.',
-                image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1stw4bo0sPWSZujr1C9VxteOK-LE5r9To&sz=w1200'
             },
             {
                 id: 'p8',
@@ -1843,7 +2046,7 @@
                 price: 'From $35',
                 badge: 'Custom Collar',
                 desc: '100% Egyptian cotton or pure Hoi An linen shirt with complimentary monogrammed initials on cuff.',
-                image: 'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=10GtDgMR-O7AW80z9mGehgoxQwOIKfjN_&sz=w1200'
             },
             {
                 id: 'p9',
@@ -1852,7 +2055,7 @@
                 price: 'From $150',
                 badge: 'Winter Coats',
                 desc: 'Warm, structured bespoke overcoat tailored for both men and women traveling back to colder climates.',
-                image: 'https://images.unsplash.com/photo-1544022613-e87ca75a784a?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1R42Yos9D85Jomlh8AC2yCZ9kyOebRmfv&sz=w1200'
             },
             {
                 id: 'p10',
@@ -1861,7 +2064,7 @@
                 price: 'From $75',
                 badge: 'Tropical',
                 desc: 'Breathable, lightweight Hoi An linen summer dress made to measurements in under 24 hours.',
-                image: 'https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1B42GsM2ht4NvvzBAl-Gk-cXqiO4_c7R8&sz=w1200'
             },
             {
                 id: 'p11',
@@ -1870,7 +2073,7 @@
                 price: 'From $110',
                 badge: 'Fanpage Favorite 🫶',
                 desc: '🫶 "Matching set for sister & brother ✨" — Coordinated bespoke family outfits in matching fabrics.',
-                image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1E7rLS95gLm8CIeH2wkLLibkLip-B0VI-&sz=w1200'
             },
             {
                 id: 'p12',
@@ -1879,67 +2082,67 @@
                 price: 'From $210',
                 badge: 'Pinned Post ❤️',
                 desc: 'Inspired by our pinned fanpage post "Cặp đôi hoàn cảnh 🇻🇳🇩🇰" — Coordinated suit and dress for couples.',
-                image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1TDL4NOJvgZpeVHqrHDuyObszhtUZfm0N&sz=w1200'
             }
         ];
 
-        // 2. Authentic Fanpage Posts extracted from https://www.facebook.com/DungDesignTailor/
+        // 2. Authentic Fanpage Posts (Đã thay toàn bộ sang ảnh thực tế từ Google Drive, riêng fp6 dùng đúng ảnh 1E7rLS95gLm8CIeH2wkLLibkLip-B0VI-)
         const defaultFanpagePosts = [
             {
                 id: 'fp1',
                 title: 'Black Evening Dress by Sim Tailor',
                 caption: '🌱 A beautiful girl in a black dress, made by 𝙎𝙞𝙢 𝙩𝙖𝙞𝙡𝙤𝙧🪡🧵🌸 📍 23 Le Loi Hoi An Viet Nam 📞+84906440883 #hoiansuit #simtailor',
                 tag: '8h • Public • FB: Sim Tailor',
-                image: 'https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1RTw4FMaED7girFamAKt56bNogrPfERBK&sz=w1200'
             },
             {
                 id: 'fp2',
                 title: '15 Years of Bespoke Experience',
                 caption: '𝙃𝙚𝙡𝙡𝙤 𝙚𝙫𝙚𝙧𝙮𝙤𝙣𝙚, 𝙄 𝙖𝙢 𝙎𝙞𝙢 𝙩𝙖𝙞𝙡𝙤𝙧, 𝙬𝙞𝙩𝙝 15 𝙮𝙚𝙖𝙧𝙨 𝙤𝙛 𝙚𝙭𝙥𝙚𝙧𝙞𝙚𝙣𝙘𝙚. 🪡🧵🌸 📍 23 Le Loi Hoi An 📞+84906440883 #simbespoketailorhoian',
                 tag: '5d • Public • Master Tailor Sim',
-                image: 'https://images.unsplash.com/photo-1556905055-8f358a7a47b2?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1hqePF8Kpppqv8KshkWzRuJATsUp4FP9f&sz=w1200'
             },
             {
                 id: 'fp3',
                 title: 'Tailor Made Suits By Us ✨',
                 caption: 'Tailor made suits by us ✨✨✨ 🪡🧵 Sim Bespoke Tailor Hoi An 📍 23 Le Loi Hoi An Viet Nam 🇻🇳 #simtailor #hoiansuit #suit #custom',
                 tag: '2w • Public • Custom Suits',
-                image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a&sz=w1200'
             },
             {
                 id: 'fp4',
                 title: 'Top & Skirt Set Made By Us 🙏☺️',
                 caption: 'Top & skirt made by us 🙏☺️✨✨✨ 🪡 Bespoke Tailor 🧵 📍 23 Le Loi Hoi An Viet Nam 🇻🇳 📞+84906440883 #simtailor #dresses',
                 tag: '5w • Public • Women Couture',
-                image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1GxtnLxagsL82-9aOn260VjMYYsouZH9J&sz=w1200'
             },
             {
                 id: 'fp5',
                 title: 'Thank You Julie from France 🇫🇷',
                 caption: 'Thank you, Julie come from the beautiful country France 🇫🇷. Thank you for your continued support. I\'m very grateful for it. 🙏❤️🫶🇻🇳',
                 tag: '12w • Client Feedback • France',
-                image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1LfhNHNeeI7qhBAoyD6siRucBAz_7_dvU&sz=w1200'
             },
             {
                 id: 'fp6',
                 title: 'Matching Set for Sister & Brother 🫶',
                 caption: 'Matching set for sister & brother 🫶🫶🫶✨✨✨ 🪡 Dung Design Bespoke Tailor 🧵 📍 23 Le Loi Hoi An #hoiancustomclothing',
                 tag: '12w • Family Bespoke',
-                image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1E7rLS95gLm8CIeH2wkLLibkLip-B0VI-&sz=w1200'
             },
             {
                 id: 'fp7',
                 title: 'Lovely Family from Iceland 🇮🇸',
                 caption: '𝙏𝙝𝙖𝙣𝙠 𝙮𝙤𝙪 𝙩𝙝𝙚 𝙛𝙖𝙢𝙞𝙡𝙮 𝙛𝙧𝙤𝙢 𝐈𝐜𝐞𝐥𝐚𝐧𝐝 🇮🇸. 𝙎𝙤 𝙜𝙡𝙖𝙙 𝙛𝙤𝙧 𝙘𝙝𝙤𝙤𝙨𝙚 𝙪𝙨 𝙩𝙤 𝙤𝙧𝙙𝙚𝙧 𝙘𝙡𝙤𝙩𝙝𝙚𝙨. 🧵🪡🙏☘️🌹 📍 23 Le Loi Hoi An',
                 tag: '12w • Client Feedback • Iceland',
-                image: 'https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1B42GsM2ht4NvvzBAl-Gk-cXqiO4_c7R8&sz=w1200'
             },
             {
                 id: 'fp8',
                 title: 'Cặp Đôi Hoàn Cảnh 🇻🇳🇩🇰 (Pinned)',
                 caption: '📌 Pinned Post: Cặp đôi hoàn cảnh 🇻🇳🇩🇰 — Custom couple outfits tailored at Sim Tailor 23 Lê Lợi, Hội An 📞 +84906440883',
                 tag: 'Pinned Post • Couple Collection',
-                image: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80'
+                image: 'https://drive.google.com/thumbnail?id=1TDL4NOJvgZpeVHqrHDuyObszhtUZfm0N&sz=w1200'
             }
         ];
 
