@@ -1871,14 +1871,11 @@
         // Ảnh chỉ định riêng cho mục "Matching Set for Sister & Brother" (chỗ khoanh đỏ)
         const SISTER_BROTHER_PHOTO_ID = '1E7rLS95gLm8CIeH2wkLLibkLip-B0VI-';
 
-        // Thư mục Google Drive chứa bộ ảnh thực tế cho Cloth Shop đến hết trang web
-        const SHOP_AND_LOOKBOOK_FOLDER_ID = '1aSi44gNpc80EfLFGQMKA7TkImgXRyuEz';
-
         function driveThumbUrl(fileId) {
             return `https://drive.google.com/thumbnail?id=${fileId}&sz=w1200`;
         }
 
-        // Gắn trực tiếp ảnh thực tế từ Google Drive vào các thẻ ảnh mà không bị lỗi CORS
+        // Gắn trực tiếp ảnh thực tế từ Google Drive vào các thẻ ảnh mà không tự động đổi ảnh trên trang web
         function loadDriveFolderImages() {
             DRIVE_PHOTO_IDS.forEach((fileId, index) => {
                 const imgEl = document.getElementById('drive-img-' + index);
@@ -1905,73 +1902,6 @@
                     };
                 }
             });
-
-            // Tự động đồng bộ toàn bộ danh sách ảnh trong folder Google Drive 1aSi44gNpc80EfLFGQMKA7TkImgXRyuEz
-            syncImagesFromGoogleDriveFolder(SHOP_AND_LOOKBOOK_FOLDER_ID);
-        }
-
-        async function syncImagesFromGoogleDriveFolder(folderId) {
-            const folderEmbedUrl = `https://drive.google.com/embeddedfolderview?id=${folderId}#list`;
-            const proxyUrls = [
-                `https://api.allorigins.win/raw?url=${encodeURIComponent(folderEmbedUrl)}`,
-                `https://api.codetabs.com/v1/proxy?quest=${encodeURIComponent(folderEmbedUrl)}`,
-                `https://corsproxy.io/?${encodeURIComponent(folderEmbedUrl)}`
-            ];
-
-            for (const proxy of proxyUrls) {
-                try {
-                    const response = await fetch(proxy);
-                    if (!response.ok) continue;
-                    const htmlText = await response.text();
-                    const matches = [...htmlText.matchAll(/\/file\/d\/([a-zA-Z0-9_-]{25,})/g)];
-                    const entryMatches = [...htmlText.matchAll(/id="entry-([a-zA-Z0-9_-]{25,})"/g)];
-                    const uniqueIds = [...new Set([
-                        ...matches.map(m => m[1]),
-                        ...entryMatches.map(m => m[1])
-                    ])].filter(id => id !== folderId && id !== '1ko0BGjcxaymrEWQk9eSPlLgjDppDxgzA');
-
-                    if (uniqueIds.length > 0) {
-                        // Cập nhật ảnh thực tế từ thư mục cho toàn bộ sản phẩm Cloth Shop
-                        products.forEach((prod, idx) => {
-                            if (prod.id === 'p11') {
-                                prod.image = driveThumbUrl(SISTER_BROTHER_PHOTO_ID);
-                            } else {
-                                const fid = uniqueIds[idx % uniqueIds.length];
-                                prod.image = driveThumbUrl(fid);
-                            }
-                        });
-
-                        // Cập nhật ảnh thực tế cho Fanpage Lookbook (riêng fp6 giữ cố định ảnh khoanh đỏ 1E7rLS95gLm8CIeH2wkLLibkLip-B0VI-)
-                        fanpagePosts.forEach((post, idx) => {
-                            if (post.id === 'fp6') {
-                                post.image = driveThumbUrl(SISTER_BROTHER_PHOTO_ID);
-                            } else {
-                                const fid = uniqueIds[(idx + 4) % uniqueIds.length];
-                                post.image = driveThumbUrl(fid);
-                            }
-                        });
-
-                        // Cập nhật 3 ảnh bài viết Blogs ở cuối trang
-                        [0, 1, 2].forEach((bIdx) => {
-                            const blogImg = document.getElementById('blog-img-' + bIdx);
-                            if (blogImg) {
-                                const fid = uniqueIds[(bIdx + 2) % uniqueIds.length];
-                                blogImg.src = driveThumbUrl(fid);
-                                blogImg.onerror = function() {
-                                    this.onerror = null;
-                                    this.src = `https://lh3.googleusercontent.com/d/${fid}=w1200`;
-                                };
-                            }
-                        });
-
-                        renderProducts(currentCategory);
-                        renderFanpageLookbook();
-                        break;
-                    }
-                } catch (err) {
-                    // Nếu proxy không phản hồi thì dùng bộ ảnh thực tế Google Drive đã gắn sẵn bên dưới
-                }
-            }
         }
 
         // 1. Cloth Shop Catalog (Đã thay toàn bộ sang ảnh thực tế từ Google Drive của Sim Tailor)
@@ -2010,7 +1940,7 @@
                 price: 'From $140',
                 badge: 'Sartorial',
                 desc: 'Sharp peak lapels and structured shoulders inspired by Italian bespoke tailoring, finished in 24–48 hours.',
-                image: 'https://drive.google.com/thumbnail?id=1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a&sz=w1200'
+                image: 'https://drive.google.com/thumbnail?id=1kGxLdbJWMCweChXbpk--4yFlPEDCiTw7&sz=w1200'
             },
             {
                 id: 'p5',
