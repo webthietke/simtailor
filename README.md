@@ -1,6 +1,7 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-site-verification" content="Cjjh6EigFeRi9_EYOgXE2m8wD7A2q4s-11_PFw3nkG4" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sim Tailor – Bespoke Tailor Hoi An | simtailorhoian.com</title>
     <meta name="description" content="Sim Tailor (Dũng Design Bespoke Tailor) - Family bespoke design tailor made to measurements & Worldwide Shipping. 15+ years experience. Address: 23 Lê Lợi, Hội An, Đà Nẵng. Hotline/WhatsApp: 0906.440.883">
