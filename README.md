@@ -4,6 +4,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sim Tailor – Bespoke Tailor Hoi An | simtailorhoian.com</title>
     <meta name="description" content="Sim Tailor (Dũng Design Bespoke Tailor) - Family bespoke design tailor made to measurements & Worldwide Shipping. 15+ years experience. Address: 23 Lê Lợi, Hội An, Đà Nẵng. Hotline/WhatsApp: 0906.440.883">
+    <!-- Open Graph / Zalo / Facebook / Social Preview Thumbnail & Description -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Sim Tailor – Bespoke Tailor Hoi An | simtailorhoian.com">
+    <meta property="og:description" content="Sim Tailor (Dũng Design Bespoke Tailor) - Family bespoke design tailor made to measurements & Worldwide Shipping. 15+ years experience. Address: 23 Lê Lợi, Hội An, Đà Nẵng. Hotline/WhatsApp: 0906.440.883">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=85">
+    <meta property="og:image:secure_url" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=85">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sim Tailor – Bespoke Tailor Hoi An | simtailorhoian.com">
+    <meta name="twitter:description" content="Sim Tailor (Dũng Design Bespoke Tailor) - Family bespoke design tailor made to measurements & Worldwide Shipping. 15+ years experience. Address: 23 Lê Lợi, Hội An, Đà Nẵng. Hotline/WhatsApp: 0906.440.883">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=85">
+    <link rel="image_src" href="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=85">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Playfair Display for Bespoke Luxury Headings & Inter for Clean UI -->
