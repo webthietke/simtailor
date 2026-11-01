@@ -818,7 +818,7 @@
                 </div>
             </div>
 
-            <!-- Bộ Sưu Tập Đồ Cưới May Đo (Bespoke Wedding Gallery - Chuẩn 3 Cột Trên Điện Thoại) -->
+            <!-- Bộ Sưu Tập Đồ Cưới & Hình Ảnh May Đo Thực Tế (Chuẩn 3 Cột Trên Điện Thoại) -->
             <div class="mt-10 sm:mt-12 pt-8 border-t border-gold-200/60">
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-5">
                     <div>
@@ -837,7 +837,7 @@
                     </a>
                 </div>
 
-                <!-- Lưới 3 cột tối ưu trên điện thoại và máy tính -->
+                <!-- Lưới 3 cột tối ưu trên điện thoại và máy tính (18 ảnh = 6 hàng chuẩn 3 cột) -->
                 <div id="wedding-gallery-grid" class="three-photos-row">
                     <!-- Wedding Photo 1: 1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a -->
                     <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
@@ -962,6 +962,204 @@
                         <div class="p-1.5 sm:p-3.5 bg-white">
                             <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Wedding #7</p>
                             <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Made to Measure</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 8: 1Pl6cVyxDgNl-0dv-cOIey-vahES1hB_w -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-7" 
+                                 src="https://drive.google.com/thumbnail?id=1Pl6cVyxDgNl-0dv-cOIey-vahES1hB_w&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1Pl6cVyxDgNl-0dv-cOIey-vahES1hB_w=w1200';"
+                                 alt="Sim Tailor Gallery 8" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 08
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #8</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Sim Tailor Hoi An</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 9: 1JW7krePf3exHsycRzWG835F8WHx8GQmv -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-8" 
+                                 src="https://drive.google.com/thumbnail?id=1JW7krePf3exHsycRzWG835F8WHx8GQmv&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1JW7krePf3exHsycRzWG835F8WHx8GQmv=w1200';"
+                                 alt="Sim Tailor Gallery 9" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 09
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #9</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">23 Lê Lợi, Hội An</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 10: 1JoAGMORM-xcPwsygJCs7t1vmPaQtTy4w -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-9" 
+                                 src="https://drive.google.com/thumbnail?id=1JoAGMORM-xcPwsygJCs7t1vmPaQtTy4w&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1JoAGMORM-xcPwsygJCs7t1vmPaQtTy4w=w1200';"
+                                 alt="Sim Tailor Gallery 10" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 10
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #10</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Custom Tailoring</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 11: 1Uf1-JaMM2cYds1UJNKIEU2w8dQyAM3aV -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-10" 
+                                 src="https://drive.google.com/thumbnail?id=1Uf1-JaMM2cYds1UJNKIEU2w8dQyAM3aV&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1Uf1-JaMM2cYds1UJNKIEU2w8dQyAM3aV=w1200';"
+                                 alt="Sim Tailor Gallery 11" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 11
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #11</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Handcrafted Fit</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 12: 1MSdEv779mu-sRCZ3Q9ElnuISgLtKkBCX -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-11" 
+                                 src="https://drive.google.com/thumbnail?id=1MSdEv779mu-sRCZ3Q9ElnuISgLtKkBCX&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1MSdEv779mu-sRCZ3Q9ElnuISgLtKkBCX=w1200';"
+                                 alt="Sim Tailor Gallery 12" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 12
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #12</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Luxury Fabrics</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 13: 1VPr2UiKDZAUzYS5AJx18zPSnElFSNJXG -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-12" 
+                                 src="https://drive.google.com/thumbnail?id=1VPr2UiKDZAUzYS5AJx18zPSnElFSNJXG&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1VPr2UiKDZAUzYS5AJx18zPSnElFSNJXG=w1200';"
+                                 alt="Sim Tailor Gallery 13" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 13
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #13</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Sim Tailor Couture</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 14: 1YttkIRpIqxXbEdHqBbQGk_xMl4bQTOAP -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-13" 
+                                 src="https://drive.google.com/thumbnail?id=1YttkIRpIqxXbEdHqBbQGk_xMl4bQTOAP&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1YttkIRpIqxXbEdHqBbQGk_xMl4bQTOAP=w1200';"
+                                 alt="Sim Tailor Gallery 14" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 14
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #14</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Silk & Wool</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 15: 1sjPrCzfqAPXI_9QrkrUS4tWVY8d0uO7X -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-14" 
+                                 src="https://drive.google.com/thumbnail?id=1sjPrCzfqAPXI_9QrkrUS4tWVY8d0uO7X&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1sjPrCzfqAPXI_9QrkrUS4tWVY8d0uO7X=w1200';"
+                                 alt="Sim Tailor Gallery 15" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 15
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #15</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">23 Lê Lợi, Hội An</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 16: 1Fig814jHZ8crhCmDc1vsGyt_bhR1NFAn -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-15" 
+                                 src="https://drive.google.com/thumbnail?id=1Fig814jHZ8crhCmDc1vsGyt_bhR1NFAn&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1Fig814jHZ8crhCmDc1vsGyt_bhR1NFAn=w1200';"
+                                 alt="Sim Tailor Gallery 16" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 16
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #16</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Made to Measure</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 17: 1bLJijCRgYqhORfLjLy4pWrlmDNqXIbX- -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-16" 
+                                 src="https://drive.google.com/thumbnail?id=1bLJijCRgYqhORfLjLy4pWrlmDNqXIbX-&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1bLJijCRgYqhORfLjLy4pWrlmDNqXIbX-=w1200';"
+                                 alt="Sim Tailor Gallery 17" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 17
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #17</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Sartorial Craft</p>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Photo 18: 1kGxLdbJWMCweChXbpk--4yFlPEDCiTw7 -->
+                    <div class="card-zoom bg-white rounded-xl sm:rounded-2xl overflow-hidden border border-gold-200 shadow-md flex flex-col justify-between group min-w-0">
+                        <div class="relative h-36 sm:h-72 overflow-hidden bg-stone-100">
+                            <img id="wedding-img-17" 
+                                 src="https://drive.google.com/thumbnail?id=1kGxLdbJWMCweChXbpk--4yFlPEDCiTw7&sz=w1200" 
+                                 onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/d/1kGxLdbJWMCweChXbpk--4yFlPEDCiTw7=w1200';"
+                                 alt="Sim Tailor Gallery 18" 
+                                 class="zoom-img w-full h-full object-cover">
+                            <span class="absolute top-1.5 left-1.5 sm:top-2.5 sm:left-2.5 px-1.5 sm:px-2.5 py-0.5 sm:py-1 rounded-full bg-charcoal-900/85 text-gold-300 text-[8px] sm:text-[10px] font-semibold backdrop-blur-sm">
+                                Gallery 18
+                            </span>
+                        </div>
+                        <div class="p-1.5 sm:p-3.5 bg-white">
+                            <p class="font-serif-luxury font-bold text-charcoal-900 text-[10px] sm:text-sm truncate">Bespoke Look #18</p>
+                            <p class="text-[8.5px] sm:text-[11px] text-stone-500 truncate">Sim Tailor Hoi An</p>
                         </div>
                     </div>
                 </div>
@@ -1857,7 +2055,7 @@
             '1hqePF8Kpppqv8KshkWzRuJATsUp4FP9f'
         ];
 
-        // Danh sách 7 File ID ảnh Đồ Cưới (Bespoke Wedding Collection) từ Google Drive
+        // Danh sách 18 File ID ảnh Đồ Cưới & Bộ Sưu Tập May Đo (7 ảnh đầu + 11 ảnh bổ sung)
         const WEDDING_DRIVE_PHOTO_IDS = [
             '1Xyt0PwCW80x-22nhQd2YkxjXlnTUqC5a',
             '1WCTf-vjqjI-4swjQw93shwKDw5f6KeCt',
@@ -1865,7 +2063,18 @@
             '10GtDgMR-O7AW80z9mGehgoxQwOIKfjN_',
             '1R42Yos9D85Jomlh8AC2yCZ9kyOebRmfv',
             '1B42GsM2ht4NvvzBAl-Gk-cXqiO4_c7R8',
-            '1TDL4NOJvgZpeVHqrHDuyObszhtUZfm0N'
+            '1TDL4NOJvgZpeVHqrHDuyObszhtUZfm0N',
+            '1Pl6cVyxDgNl-0dv-cOIey-vahES1hB_w',
+            '1JW7krePf3exHsycRzWG835F8WHx8GQmv',
+            '1JoAGMORM-xcPwsygJCs7t1vmPaQtTy4w',
+            '1Uf1-JaMM2cYds1UJNKIEU2w8dQyAM3aV',
+            '1MSdEv779mu-sRCZ3Q9ElnuISgLtKkBCX',
+            '1VPr2UiKDZAUzYS5AJx18zPSnElFSNJXG',
+            '1YttkIRpIqxXbEdHqBbQGk_xMl4bQTOAP',
+            '1sjPrCzfqAPXI_9QrkrUS4tWVY8d0uO7X',
+            '1Fig814jHZ8crhCmDc1vsGyt_bhR1NFAn',
+            '1bLJijCRgYqhORfLjLy4pWrlmDNqXIbX-',
+            '1kGxLdbJWMCweChXbpk--4yFlPEDCiTw7'
         ];
 
         // Ảnh chỉ định riêng cho mục "Matching Set for Sister & Brother" (chỗ khoanh đỏ)
